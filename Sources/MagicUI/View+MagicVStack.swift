@@ -66,7 +66,7 @@ public extension View {
         .font(.title)
         .foregroundColor(.blue)
         .inMagicVStackCenter()
-        .frame(width: 300, height: 200)
+        .frame(width: 300, height: 600)
         .background(Color.gray.opacity(0.1))
 }
 
@@ -79,7 +79,7 @@ public extension View {
             .foregroundColor(.secondary)
     }
     .inMagicVStackCenter(spacing: 20)
-    .frame(width: 300, height: 200)
+    .frame(width: 300, height: 600)
     .background(Color.gray.opacity(0.1))
 }
 

@@ -1,0 +1,100 @@
+---
+globs: *.swift
+alwaysApply: false
+---
+
+# Swift文件预览代码规则
+
+每个Swift文件都必须在文件结尾包含以下预览代码：
+
+```swift
+#Preview("App - Small Screen") {
+    ContentLayout()
+        .hideSidebar()
+        .hideProjectActions()
+        .inRootView()
+        .frame(width: 800)
+        .frame(height: 600)
+}
+
+#Preview("App - Big Screen") {
+    ContentLayout()
+        .hideSidebar()
+        .inRootView()
+        .frame(width: 1200)
+        .frame(height: 1200)
+}
+```
+
+## 规则说明
+
+- 这些预览代码必须添加到每个Swift文件的末尾
+- 第一个预览用于小屏幕（800x600左右，未必一定是这个值）
+- 第二个预览用于大屏幕（1200x1200左右，未必一定是这个值）
+- 小屏幕预览隐藏侧边栏和项目操作
+- 大屏幕预览只隐藏侧边栏
+
+## 注意事项
+
+- 确保在添加预览代码前检查文件是否已经包含类似的预览代码
+- 如果文件已有预览代码，请替换为上述标准格式
+
+## 开发流程
+
+- **修改完代码不需要构建** - 在Cursor中修改Swift代码后，无需手动运行xcodebuild命令
+- 代码修改会自动保存，可以直接在Xcode中运行和测试
+- 只有在需要验证构建成功或解决编译错误时才需要构建项目
+
+## 组件文件组织规则
+
+- **每个struct一个文件** - 将复杂的组件文件拆分为多个独立的文件，每个文件只包含一个主要的struct
+- **文件命名** - 文件名应与struct名称保持一致，使用PascalCase命名
+- **目录结构** - 相关组件应放在同一目录下，便于管理和查找
+- **导入依赖** - 每个组件文件应包含必要的import语句和依赖
+- **预览代码** - 每个组件文件都应包含完整的预览代码，便于独立测试
+
+## 实际应用示例
+
+### 示例1：Icon相关文件
+
+假设你在 `Plugins/Icon/ToolBar/IconTopBar.swift` 文件中添加预览代码：
+
+```swift
+#Preview("App - Small Screen") {
+    ContentLayout()
+        .hideSidebar()
+        .hideProjectActions()
+        .inRootView()
+        .frame(width: 800)
+        .frame(height: 600)
+}
+```
+
+### 示例2：Git相关文件
+
+假设你在 `Plugins/Git/GitDetail.swift` 文件中添加预览代码：
+
+```swift
+#Preview("App - Big Screen") {
+    ContentLayout()
+        .hideSidebar()
+        .inRootView()
+        .frame(width: 1200)
+        .frame(height: 1200)
+}
+```
+
+### 示例3：Banner相关文件
+
+假设你在 `Plugins/Banner/Editor/BannerTitle.swift` 文件中添加预览代码：
+
+```swift
+#Preview("App - Small Screen") {
+    ContentLayout()
+        .hideSidebar()
+        .hideProjectActions()
+        .inRootView()
+        .frame(width: 800)
+        .frame(height: 600)
+}
+```

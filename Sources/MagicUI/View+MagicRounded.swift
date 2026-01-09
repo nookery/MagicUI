@@ -184,7 +184,8 @@ public extension View {
         .padding()
         .background(Color.blue)
         .magicRoundedSmall()
-        .frame(width: 200, height: 60)
+        .inMagicVStackCenter()
+        .frame(width: 200, height: 600)
 }
 
 #Preview("Magic Rounded - Medium") {

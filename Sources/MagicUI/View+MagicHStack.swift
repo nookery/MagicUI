@@ -66,7 +66,7 @@ public extension View {
         .font(.title)
         .foregroundColor(.blue)
         .inMagicHStackCenter()
-        .frame(width: 300, height: 100)
+        .frame(width: 300, height: 400)
         .background(Color.gray.opacity(0.1))
 }
 
