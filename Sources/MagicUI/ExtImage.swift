@@ -1283,3 +1283,9 @@ public extension Image {
         Image(systemName: .iconUnderline)
     }
 }
+
+#Preview("Image图标演示") {
+    NavigationStack {
+        ImageExtensionDemoView()
+    }
+}

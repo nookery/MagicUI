@@ -14,7 +14,7 @@ public extension String {
             size: .regular,
             shape: .roundedRectangle,
             popoverContent: AnyView(
-                StringIconExtensionDemoView()
+                ImageExtensionDemoView()
                     .frame(width: 500)
             )
         )
@@ -22,14 +22,25 @@ public extension String {
 
     // MARK: - Icons (A-Z)
 
+    // MARK: A
+
+    /// 访问控制图标名称 (lock.shield)
+    static let iconAccessControl = "lock.shield"
+
     /// 账户设置图标名称 (person.circle)
     static let iconAccountSetting = "person.circle"
+
+    /// 成就图标名称 (star.circle)
+    static let iconAchievement = "star.circle"
 
     /// 活动记录图标名称 (flame)
     static let iconActivity = "flame"
 
     /// 活动记录填充图标名称 (flame.fill)
     static let iconActivityFill = "flame.fill"
+
+    /// 活动追踪器图标名称 (figure.walk)
+    static let iconActivityTracker = "figure.walk"
 
     /// 添加图标名称 (plus)
     static let iconAdd = "plus"
@@ -39,6 +50,15 @@ public extension String {
 
     /// 添加用户图标名称 (person.badge.plus)
     static let iconAddUser = "person.badge.plus"
+
+    /// 高级筛选图标名称 (line.3.horizontal.decrease.circle.fill)
+    static let iconAdvancedFilter = "line.3.horizontal.decrease.circle.fill"
+
+    /// 飞行模式图标名称 (airplane)
+    static let iconAirplane = "airplane"
+
+    /// 专辑图标名称 (square.stack)
+    static let iconAlbum = "square.stack"
 
     /// 居中对齐图标名称 (text.aligncenter)
     static let iconAlignCenter = "text.aligncenter"
@@ -52,23 +72,11 @@ public extension String {
     /// 右对齐图标名称 (text.alignright)
     static let iconAlignRight = "text.alignright"
 
-    /// 飞行模式图标名称 (airplane)
-    static let iconAirplane = "airplane"
+    /// Apple终端图标名称 (apple.terminal)
+    static let iconAppleTerminal = "apple.terminal"
 
-    /// 专辑图标名称 (square.stack)
-    static let iconAlbum = "square.stack"
-
-    /// 艺术家图标名称 (music.mic)
-    static let iconArtist = "music.mic"
-
-    /// 音频文档图标名称 (music.note)
-    static let iconAudioDocument = "music.note"
-
-    /// 输入设备图标名称 (mic)
-    static let iconAudioInput = "mic"
-
-    /// 输出设备图标名称 (speaker.wave.2.circle)
-    static let iconAudioOutput = "speaker.wave.2.circle"
+    /// 审批图标名称 (checkmark.circle.badge.questionmark)
+    static let iconApproval = "checkmark.circle.badge.questionmark"
 
     /// App Store图标名称 (app.store)
     static let iconAppStore = "app.store"
@@ -79,11 +87,28 @@ public extension String {
     /// 向上箭头圆形图标名称 (arrow.up.circle)
     static let iconArrowUpCircle = "arrow.up.circle"
 
-    /// 快退图标名称 (backward)
-    static let iconBackward = "backward"
+    /// 艺术家图标名称 (music.mic)
+    static let iconArtist = "music.mic"
 
-    /// 快退填充图标名称 (backward.end.fill)
-    static let iconBackwardEndFill = "backward.end.fill"
+    /// 音频设备切换图标名称 (airpodspro)
+    static let iconAudioDevice = "airpodspro"
+
+    /// 音频文档图标名称 (music.note)
+    static let iconAudioDocument = "music.note"
+
+    /// 输入设备图标名称 (mic)
+    static let iconAudioInput = "mic"
+
+    /// 输出设备图标名称 (speaker.wave.2.circle)
+    static let iconAudioOutput = "speaker.wave.2.circle"
+
+    /// 自动化图标名称 (gear.badge.automatic)
+    static let iconAutomation = "gear.badge.automatic"
+
+    // MARK: B
+
+    /// 背景色图标名称 (paintbrush)
+    static let iconBackgroundColor = "paintbrush"
 
     /// 备份图标名称 (arrow.clockwise.icloud)
     static let iconBackup = "arrow.clockwise.icloud"
@@ -100,6 +125,12 @@ public extension String {
     /// 备份恢复填充图标名称 (arrow.counterclockwise.icloud.fill)
     static let iconBackupRestoreFill = "arrow.counterclockwise.icloud.fill"
 
+    /// 快退图标名称 (backward)
+    static let iconBackward = "backward"
+
+    /// 快退填充图标名称 (backward.end.fill)
+    static let iconBackwardEndFill = "backward.end.fill"
+
     /// 电池图标名称 (battery.100)
     static let iconBattery = "battery.100"
 
@@ -112,8 +143,13 @@ public extension String {
     /// AI大脑图标名称 (brain.head.profile)
     static let iconBrain = "brain.head.profile"
 
+    /// 预算图标名称 (dollarsign.circle)
+    static let iconBudget = "dollarsign.circle"
+
     /// 项目符号列表图标名称 (list.bullet)
     static let iconBulletList = "list.bullet"
+
+    // MARK: C
 
     /// 缓存设置图标名称 (trash.circle)
     static let iconCacheSetting = "trash.circle"
@@ -205,6 +241,15 @@ public extension String {
     /// 复制图标名称 (doc.on.doc)
     static let iconCopy = "doc.on.doc"
 
+    /// 证书图标名称 (rosette)
+    static let iconCertificate = "rosette"
+
+    /// 图表分析图标名称 (chart.bar.xaxis)
+    static let iconChartAnalysis = "chart.bar.xaxis"
+
+    /// 创意图标名称 (lightbulb)
+    static let iconCreativity = "lightbulb"
+
     /// 剪切图标名称 (scissors)
     static let iconCut = "scissors"
 
@@ -215,7 +260,7 @@ public extension String {
     static let iconDoc = "doc.on.doc"
 
     /// 文档图标名称 (doc)
-    static let iconDocument = "doc"
+    static let iconDocument = "doc.text"
 
     /// 文档填充内容图标 (text.badge.plus)
     static let iconDocumentFill = "text.badge.plus"
@@ -229,6 +274,127 @@ public extension String {
     /// 下载图标名称 (arrow.down.circle)
     static let iconDownload = "arrow.down.circle"
 
+    // MARK: D
+
+    /// 数据导出图标名称 (arrow.up.doc)
+    static let iconDataExport = "arrow.up.doc"
+
+    /// 数据导入图标名称 (arrow.down.doc)
+    static let iconDataImport = "arrow.down.doc"
+
+    /// 数据排序图标名称 (arrow.up.arrow.down)
+    static let iconDataSort = "arrow.up.arrow.down"
+
+    /// 数据可视化图标名称 (chart.pie)
+    static let iconDataVisualization = "chart.pie"
+
+    /// 方向图标名称 (arrow.triangle.turn.up.right.diamond)
+    static let iconDirections = "arrow.triangle.turn.up.right.diamond"
+
+    /// 财务报表图标名称 (chart.bar.doc.horizontal)
+    static let iconFinancialReport = "chart.bar.doc.horizontal"
+
+    /// 地理围栏图标名称 (mappin.and.ellipse)
+    static let iconGeofence = "mappin.and.ellipse"
+
+    /// 群组工作图标名称 (person.3)
+    static let iconGroupWork = "person.3"
+
+    /// 健康指标图标名称 (heart.text.square)
+    static let iconHealthMetrics = "heart.text.square"
+
+    /// 发票图标名称 (doc.text.magnifyingglass)
+    static let iconInvoice = "doc.text.magnifyingglass"
+
+    /// 布局图标名称 (rectangle.grid.2x2)
+    static let iconLayout = "rectangle.grid.2x2"
+
+    /// 学习进度图标名称 (chart.bar.fill)
+    static let iconLearningProgress = "chart.bar.fill"
+
+    /// 实时聊天图标名称 (bubble.left.and.bubble.right)
+    static let iconLiveChat = "bubble.left.and.bubble.right"
+
+    /// 位置标记图标名称 (mappin)
+    static let iconLocationMarker = "mappin"
+
+    /// 地图图层图标名称 (map)
+    static let iconMapLayers = "map"
+
+    /// 医疗记录图标名称 (heart.text.square.fill)
+    static let iconMedicalRecord = "heart.text.square.fill"
+
+    /// 导航图标名称 (location.north.line)
+    static let iconNavigation = "location.north.line"
+
+    /// 网络状态图标名称 (wifi)
+    static let iconNetworkStatus = "wifi"
+
+    /// 支付图标名称 (creditcard)
+    static let iconPayment = "creditcard"
+
+    /// 权限图标名称 (key)
+    static let iconPermissions = "key"
+
+    /// 电话图标名称 (phone)
+    static let iconPhoneCall = "phone"
+
+    /// 演示图标名称 (rectangle.inset.filled.and.person.filled)
+    static let iconPresentation = "rectangle.inset.filled.and.person.filled"
+
+    /// 隐私图标名称 (hand.raised")
+    static let iconPrivacy = "hand.raised"
+
+    /// 排名图标名称 (list.number)
+    static let iconRanking = "list.number"
+
+    /// 提醒图标名称 (bell.badge)
+    static let iconReminder = "bell.badge"
+
+    /// 卫星视图图标名称 (map.circle)
+    static let iconSatelliteView = "map.circle"
+
+    /// 日程图标名称 (calendar.badge.plus)
+    static let iconSchedule = "calendar.badge.plus"
+
+    /// 传感器网络图标名称 (sensor.tag.radiowaves.forward)
+    static let iconSensorNetwork = "sensor.tag.radiowaves.forward"
+
+    /// 智能家居图标名称 (house")
+    static let iconSmartHome = "house"
+
+    /// 智能日程图标名称 (calendar.badge.clock)
+    static let iconSmartSchedule = "calendar.badge.clock"
+
+    /// 团队协作图标名称 (person.2.wave.2)
+    static let iconTeamCollaboration = "person.2.wave.2"
+
+    /// 时间线图标名称 (timeline.selection)
+    static let iconTimeline = "timeline.selection"
+
+    /// 交易图标名称 (arrow.left.arrow.right")
+    static let iconTransaction = "arrow.left.arrow.right"
+
+    /// 视频通话图标名称 (video")
+    static let iconVideoCall = "video"
+
+    /// 生命体征图标名称 (waveform.path.ecg.rectangle")
+    static let iconVitalSigns = "waveform.path.ecg.rectangle"
+
+    /// 白板图标名称 (rectangle.and.pencil.and.ellipsis")
+    static let iconWhiteboard = "rectangle.and.pencil.and.ellipsis"
+
+    /// 工作流图标名称 (arrow.triangle.branch")
+    static let iconWorkflow = "arrow.triangle.branch"
+
+    /// 运动图标名称 (figure.run")
+    static let iconWorkout = "figure.run"
+
+    /// 开发者设置图标名称 (hammer.circle)
+    static let iconDeveloperSetting = "hammer.circle"
+
+    // MARK: E
+
     /// 编辑图标名称 (pencil)
     static let iconEdit = "pencil"
 
@@ -237,12 +403,6 @@ public extension String {
 
     /// 编辑填充图标名称 (pencil.circle.fill)
     static let iconEditCircleFill = "pencil.circle.fill"
-
-    /// 邮件图标名称 (envelope)
-    static let iconMail = "envelope"
-
-    /// 邮件填充图标名称 (envelope.fill)
-    static let iconMailFill = "envelope.fill"
 
     /// 均衡器图标名称 (waveform.path.ecg)
     static let iconEqualizer = "waveform.path.ecg"
@@ -253,6 +413,8 @@ public extension String {
     /// 退出全屏图标名称 (arrow.down.right.and.arrow.up.left)
     static let iconExitFullscreen = "arrow.down.right.and.arrow.up.left"
 
+    // MARK: F
+
     /// FaceTime图标名称 (video.badge)
     static let iconFaceTime = "video.badge"
 
@@ -262,11 +424,11 @@ public extension String {
     /// 通讯录填充图标名称 (person.crop.rectangle.fill)
     static let iconFaceTimeFillAlt = "person.crop.rectangle.fill"
 
-    /// 筛选图标名称 (line.3.horizontal.decrease.circle)
-    static let iconFilter = "line.3.horizontal.decrease.circle"
-
     /// 电影图标名称 (film)
     static let iconFilm = "film"
+
+    /// 筛选图标名称 (line.3.horizontal.decrease.circle)
+    static let iconFilter = "line.3.horizontal.decrease.circle"
 
     /// 访达图标名称 (macwindow)
     static let iconFinder = "macwindow"
@@ -282,6 +444,8 @@ public extension String {
 
     /// 快进填充图标名称 (forward.end.fill)
     static let iconForwardEndFill = "forward.end.fill"
+
+    // MARK: G
 
     /// 快进10秒图标名称 (goforward.10)
     static let iconGoforward10 = "goforward.10"
@@ -307,20 +471,29 @@ public extension String {
     /// 齿轮图标名称 (gearshape)
     static let iconGear = "gearshape"
 
+    /// 前往图标名称 (arrow.right.circle)
+    static let iconGoto = "arrow.right.circle"
+
     /// 地球图标名称 (globe)
     static let iconGlobe = "globe"
 
-    /// 喜欢图标名称 (heart)
-    static let iconHeart = "heart"
+    /// 全屏图标名称 (arrow.up.left.and.arrow.down.right)
+    static let iconFullscreen = "arrow.up.left.and.arrow.down.right"
 
-    /// 喜欢填充图标名称 (heart.fill)
-    static let iconHeartFill = "heart.fill"
+    /// 文件夹图标名称 (folder)
+    static let iconFolder = "folder"
 
-    /// 健康图标名称 (heart.text.square)
-    static let iconHealth = "heart.text.square"
+    /// 文件夹填充图标名称 (folder.fill)
+    static let iconFolderFill = "folder.fill"
 
-    /// 健康填充图标名称 (heart.text.square.fill)
-    static let iconHealthFill = "heart.text.square.fill"
+    /// 字体图标名称 (textformat)
+    static let iconFont = "textformat"
+
+    /// 字体大小图标名称 (textformat.size)
+    static let iconFontSize = "textformat.size"
+
+    /// 字体颜色图标名称 (textformat.alt)
+    static let iconFontColor = "textformat.alt"
 
     /// 指纹图标名称 (touchid)
     static let iconFingerprint = "touchid"
@@ -328,11 +501,19 @@ public extension String {
     /// 指纹填充图标名称 (touchid.fill)
     static let iconFingerprintFill = "touchid.fill"
 
-    /// 邮件应用图标名称 (envelope.badge)
-    static let iconMailApp = "envelope.badge"
+    // MARK: H
 
-    /// 邮件应用填充图标名称 (envelope.badge.fill)
-    static let iconMailAppFill = "envelope.badge.fill"
+    /// 健康图标名称 (heart.text.square)
+    static let iconHealth = "heart.text.square"
+
+    /// 健康填充图标名称 (heart.text.square.fill)
+    static let iconHealthFill = "heart.text.square.fill"
+
+    /// 喜欢图标名称 (heart)
+    static let iconHeart = "heart"
+
+    /// 喜欢填充图标名称 (heart.fill)
+    static let iconHeartFill = "heart.fill"
 
     /// 家庭图标名称 (house)
     static let iconHome = "house"
@@ -343,17 +524,7 @@ public extension String {
     /// 超链接图标名称 (link.badge.plus)
     static let iconHyperlink = "link.badge.plus"
 
-    /// 信息图标名称 (info.circle)
-    static let iconInfo = "info.circle"
-
-    /// 图片文档图标名称 (photo)
-    static let iconImageDocument = "photo"
-
-    /// 图片插入图标名称 (photo.on.rectangle.angled)
-    static let iconInsertImage = "photo.on.rectangle.angled"
-
-    /// 斜体图标名称 (italic)
-    static let iconItalic = "italic"
+    // MARK: I
 
     /// iCloud下载图标名称 (arrow.down.circle.dotted)
     static let iconICloudDownload = "arrow.down.circle.dotted"
@@ -364,41 +535,63 @@ public extension String {
     /// iCloud 文件夹图标名称 (folder.badge.questionmark)
     static let iconICloudFolder = "folder.badge.questionmark"
 
+    /// 图片文档图标名称 (photo)
+    static let iconImageDocument = "photo"
+
+    /// 缩进减少图标名称 (decrease.indent)
+    static let iconIndentDecrease = "decrease.indent"
+
+    /// 缩进增加图标名称 (increase.indent)
+    static let iconIndentIncrease = "increase.indent"
+
+    /// 信息图标名称 (info.circle)
+    static let iconInfo = "info.circle"
+
+    /// 图片插入图标名称 (photo.on.rectangle.angled)
+    static let iconInsertImage = "photo.on.rectangle.angled"
+
+    /// 灵感图标名称 (sparkles)
+    static let iconInspiration = "sparkles"
+
+    /// 物联网图标名称 (wifi.circle)
+    static let iconIoT = "wifi.circle"
+
+    /// 斜体图标名称 (italic)
+    static let iconItalic = "italic"
+
+    // MARK: L
+
     /// 最后一页图标名称 (chevron.right.2)
     static let iconLastPage = "chevron.right.2"
 
-    /// 粘贴图标名称 (doc.on.clipboard)
-    static let iconPaste = "doc.on.clipboard"
+    /// 链接图标名称 (link)
+    static let iconLink = "link"
 
-    /// 暂停图标名称 (pause.circle)
-    static let iconPause = "pause.circle"
+    /// 链接图标名称 (link.circle)
+    static let iconLinkCircle = "link.circle"
 
-    /// 暂停填充图标名称 (pause.fill)
-    static let iconPauseFill = "pause.fill"
+    /// 列表图标名称 (list.bullet)
+    static let iconList = "list.bullet"
 
-    /// 消息图标名称 (message)
-    static let iconMessage = "message"
+    /// 列表圆形图标名称 (list.bullet.circle)
+    static let iconListCircle = "list.bullet.circle"
 
-    /// 消息填充图标名称 (message.fill)
-    static let iconMessageFill = "message.fill"
+    /// 列表填充图标名称 (list.bullet.circle.fill)
+    static let iconListCircleFill = "list.bullet.circle.fill"
 
-    /// 邮件图标名称 (envelope)
-    static let iconMailAlt = "envelope"
+    /// 定位图标名称 (location)
+    static let iconLocation = "location"
 
-    /// 邮件填充图标名称 (envelope.fill)
-    static let iconMailFillAlt = "envelope.fill"
+    /// 定位填充图标名称 (location.fill)
+    static let iconLocationFill = "location.fill"
 
-    /// 质量设置图标名称 (dial.high.fill)
-    static let iconQualitySetting = "dial.high.fill"
+    /// 日志图标名称 (text.alignleft)
+    static let iconLog = "text.alignleft"
 
-    /// 减少图标名称 (minus)
-    static let iconMinus = "minus"
+    /// 歌词图标名称 (text.quote)
+    static let iconLyrics = "text.quote"
 
-    /// 减少圆形图标名称 (minus.circle)
-    static let iconMinusCircle = "minus.circle"
-
-    /// 更多图标名称 (ellipsis)
-    static let iconMore = "ellipsis"
+    // MARK: M
 
     /// 音乐图标名称 (music.note.house)
     static let iconMusic = "music.note.house"
@@ -415,8 +608,32 @@ public extension String {
     /// 音符列表图标名称 (music.note.list)
     static let iconMusicNoteList = "music.note.list"
 
-    /// 歌词图标名称 (text.quote)
-    static let iconLyrics = "text.quote"
+    /// 消息图标名称 (message)
+    static let iconMessage = "message"
+
+    /// 消息填充图标名称 (message.fill)
+    static let iconMessageFill = "message.fill"
+
+    /// 邮件图标名称 (envelope)
+    static let iconMailAlt = "envelope"
+
+    /// 邮件填充图标名称 (envelope.fill)
+    static let iconMailFillAlt = "envelope.fill"
+
+    /// 减少图标名称 (minus)
+    static let iconMinus = "minus"
+
+    /// 减少圆形图标名称 (minus.circle)
+    static let iconMinusCircle = "minus.circle"
+
+    /// 更多图标名称 (ellipsis)
+    static let iconMore = "ellipsis"
+
+    /// 邮件图标名称 (envelope)
+    static let iconMail = "envelope"
+
+    /// 邮件填充图标名称 (envelope.fill)
+    static let iconMailFill = "envelope.fill"
 
     /// 音乐仓库图标名称 (music.note.house)
     static let iconMusicLibrary = "music.note.house"
@@ -424,8 +641,37 @@ public extension String {
     /// 音乐仓库填充图标名称 (music.note.house.fill)
     static let iconMusicLibraryFill = "music.note.house.fill"
 
+    /// 邮件应用图标名称 (envelope.badge)
+    static let iconMailApp = "envelope.badge"
+
+    /// 邮件应用填充图标名称 (envelope.badge.fill)
+    static let iconMailAppFill = "envelope.badge.fill"
+
+    /// 音乐历史图标名称 (clock.arrow.circlepath)
+    static let iconMusicHistory = "clock.arrow.circlepath"
+
+    /// 下载音乐图标名称 (arrow.down.circle.dotted)
+    static let iconMusicDownload = "arrow.down.circle.dotted"
+
+    /// 音乐质量图标名称 (dial.high.fill)
+    static let iconMusicQuality = "dial.high.fill"
+
     /// 音乐文件夹图标名称 (folder.fill.badge.plus)
     static let iconMusicFolder = "folder.fill.badge.plus"
+
+    /// 地图图标名称 (map)
+    static let iconMaps = "map"
+
+    /// 地图填充图标名称 (map.fill)
+    static let iconMapsFill = "map.fill"
+
+    /// 信息图标名称 (message.badge)
+    static let iconMessages = "message.badge"
+
+    /// 信息填充图标名称 (message.badge.fill)
+    static let iconMessagesFill = "message.badge.fill"
+
+    // MARK: N
 
     /// 下一页图标名称 (chevron.right)
     static let iconNextPage = "chevron.right"
@@ -436,17 +682,11 @@ public extension String {
     /// 下一页圆形填充图标名称 (chevron.right.circle.fill)
     static let iconNextPageCircleFill = "chevron.right.circle.fill"
 
-    /// 编号列表图标名称 (list.number)
-    static let iconNumberList = "list.number"
+    /// 下一首歌曲图标名称 (forward.end)
+    static let iconNextTrack = "forward.end"
 
-    /// 数字1填充圆形图标名称 (1.circle.fill)
-    static let iconNumberCircleFill1 = "1.circle.fill"
-
-    /// 数字2填充圆形图标名称 (2.circle.fill)
-    static let iconNumberCircleFill2 = "2.circle.fill"
-
-    /// 数字3填充圆形图标名称 (3.circle.fill)
-    static let iconNumberCircleFill3 = "3.circle.fill"
+    /// 下一首歌曲填充图标名称 (forward.end.fill)
+    static let iconNextTrackFill = "forward.end.fill"
 
     /// 通知图标名称 (bell)
     static let iconNotification = "bell"
@@ -457,10 +697,39 @@ public extension String {
     /// 通知设置图标名称 (bell.badge)
     static let iconNotificationSetting = "bell.badge"
 
-    /// 终端图标名称 (terminal.fill)
-    static let iconTerminalApp = "terminal.fill"
+    /// 正在播放指示器图标名称 (waveform)
+    static let iconNowPlaying = "waveform"
 
-    /// 人物裁剪圆形图标名称 (person.crop.circle)
+    /// 数字1填充圆形图标名称 (1.circle.fill)
+    static let iconNumberCircleFill1 = "1.circle.fill"
+
+    /// 数字2填充圆形图标名称 (2.circle.fill)
+    static let iconNumberCircleFill2 = "2.circle.fill"
+
+    /// 数字3填充圆形图标名称 (3.circle.fill)
+    static let iconNumberCircleFill3 = "3.circle.fill"
+
+    /// 编号列表图标名称 (list.number)
+    static let iconNumberList = "list.number"
+
+    // MARK: P
+
+    /// 调色板图标名称 (paintpalette)
+    static let iconPaintpalette = "paintpalette"
+
+    /// 画笔图标名称 (paintbrush)
+    static let iconPaintbrush = "paintbrush"
+
+    /// 粘贴图标名称 (doc.on.clipboard)
+    static let iconPaste = "doc.on.clipboard"
+
+    /// 暂停图标名称 (pause.circle)
+    static let iconPause = "pause.circle"
+
+    /// 暂停填充图标名称 (pause.fill)
+    static let iconPauseFill = "pause.fill"
+
+    /// 人事圆形图标名称 (person.crop.circle)
     static let iconPersonCropCircle = "person.crop.circle"
 
     /// 人物圆形图标名称 (person.circle)
@@ -474,12 +743,6 @@ public extension String {
 
     /// 用户组禁用图标名称 (person.2.slash)
     static let iconPersonGroupSlash = "person.2.slash"
-
-    /// 画笔图标名称 (paintbrush)
-    static let iconPaintbrush = "paintbrush"
-
-    /// 调色板图标名称 (paintpalette)
-    static let iconPaintpalette = "paintpalette"
 
     /// 暂停图标名称 (pause.circle)
     static let iconPauseAlt = "pause.circle"
@@ -508,17 +771,48 @@ public extension String {
     /// 上一页圆形填充图标名称 (chevron.left.circle.fill)
     static let iconPreviousPageCircleFill = "chevron.left.circle.fill"
 
+    /// 上一首歌曲图标名称 (backward.end)
+    static let iconPreviousTrack = "backward.end"
+
+    /// 上一首歌曲填充图标名称 (backward.end.fill)
+    static let iconPreviousTrackFill = "backward.end.fill"
+
     /// 预览图标名称 (doc.richtext)
     static let iconPreview = "doc.richtext"
 
     /// 预览填充图标名称 (doc.richtext.fill)
     static let iconPreviewFill = "doc.richtext.fill"
 
+    /// 添加到播放列表图标名称 (plus.circle)
+    static let iconPlaylistAdd = "plus.circle"
+
+    /// 从播放列表移除图标名称 (minus.circle)
+    static let iconPlaylistRemove = "minus.circle"
+
+    /// 照片图标名称 (photo.on.rectangle)
+    static let iconPhotos = "photo.on.rectangle"
+
+    /// 照片填充图标名称 (photo.on.rectangle.fill)
+    static let iconPhotosFill = "photo.on.rectangle.fill"
+
+    /// 密码图标名称 (key)
+    static let iconPasswords = "key"
+
+    /// 密码填充图标名称 (key.fill)
+    static let iconPasswordsFill = "key.fill"
+
+    // MARK: Q
+
+    /// 质量设置图标名称 (dial.high.fill)
+    static let iconQualitySetting = "dial.high.fill"
+
     /// QuickTime图标名称 (play.rectangle)
     static let iconQuickTime = "play.rectangle"
 
     /// QuickTime填充图标名称 (play.rectangle.fill)
     static let iconQuickTimeFill = "play.rectangle.fill"
+
+    // MARK: R
 
     /// 重置图标名称 (arrow.counterclockwise)
     static let iconReset = "arrow.counterclockwise"
@@ -564,6 +858,14 @@ public extension String {
 
     /// 标尺图标名称 (ruler)
     static let iconRuler = "ruler"
+
+    /// 提醒事项图标名称 (list.bullet.rectangle)
+    static let iconReminders = "list.bullet.rectangle"
+
+    /// 提醒事项填充图标名称 (list.bullet.rectangle.fill)
+    static let iconRemindersFill = "list.bullet.rectangle.fill"
+
+    // MARK: S
 
     /// Safari浏览器图标名称 (safari)
     static let iconSafari = "safari"
@@ -643,6 +945,20 @@ public extension String {
     /// 系统设置填充图标名称 (gearshape.2.fill)
     static let iconSystemSettingsFill = "gearshape.2.fill"
 
+    /// 快捷指令图标名称 (command.square)
+    static let iconShortcuts = "command.square"
+
+    /// 快捷指令填充图标名称 (command.square.fill)
+    static let iconShortcutsFill = "command.square.fill"
+
+    /// 中速速度计图标名称 (gauge.high)
+    static let iconSpeedometerMedium = "gauge.medium"
+
+    /// 高速速度计图标名称 (gauge.badge.plus)
+    static let iconSpeedometerHigh = "gauge.badge.plus"
+
+    // MARK: T
+
     /// 表格图标名称 (tablecells)
     static let iconTable = "tablecells"
 
@@ -658,11 +974,11 @@ public extension String {
     /// 终端图标名称 (terminal)
     static let iconTerminal = "terminal"
 
+    /// 终端应用图标名称 (terminal.fill)
+    static let iconTerminalApp = "terminal.fill"
+
     /// 终端填充图标名称 (terminal.fill)
     static let iconTerminalFill = "terminal.fill"
-
-    /// 终端图标名称 (apple.terminal)
-    static let iconAppleTerminal = "apple.terminal"
 
     /// 主题设置图标名称 (paintbrush.fill)
     static let iconThemeSetting = "paintbrush.fill"
@@ -688,6 +1004,20 @@ public extension String {
     /// 清除填充图标名称 (trash.fill)
     static let iconTrashFill = "trash.fill"
 
+    /// 顶部工具栏图标 (menubar.rectangle)
+    static let iconTopToolbar = "menubar.rectangle"
+
+    /// 顶部工具栏填充图标 (menubar.dock.rectangle)
+    static let iconTopToolbarFill = "menubar.dock.rectangle"
+
+    /// 工具栏图标 (sidebar.left)
+    static let iconToolbar = "sidebar.left"
+
+    /// 工具栏填充图标 (sidebar.left.fill)
+    static let iconToolbarFill = "sidebar.left.fill"
+
+    // MARK: U
+
     /// 下划线图标名称 (underline)
     static let iconUnderline = "underline"
 
@@ -700,11 +1030,16 @@ public extension String {
     /// 用户填充图标名称 (person.circle.fill)
     static let iconUserFill = "person.circle.fill"
 
-    /// 视频文档图标名称 (video)
-    static let iconVideoDocument = "video"
+    // MARK: V
+
+    /// 静音图标名称 (speaker.slash)
+    static let iconMute = "speaker.slash"
 
     /// 版本信息图标名称 (info.circle)
     static let iconVersionInfo = "info.circle"
+
+    /// 视频文档图标名称 (video)
+    static let iconVideoDocument = "video"
 
     /// 语音备忘录图标名称 (waveform)
     static let iconVoiceMemos = "waveform"
@@ -718,14 +1053,13 @@ public extension String {
     /// 音量填充图标名称 (speaker.wave.2.fill)
     static let iconVolumeFill = "speaker.wave.2.fill"
 
-    /// 静音图标名称 (speaker.slash)
-    static let iconMute = "speaker.slash"
+    /// 音量设置图标名称 (speaker.wave.3)
+    static let iconVolumeSetting = "speaker.wave.3"
 
     /// 音量调节图标名称 (slider.horizontal.3)
     static let iconVolumeSlider = "slider.horizontal.3"
 
-    /// 音量设置图标名称 (speaker.wave.3)
-    static let iconVolumeSetting = "speaker.wave.3"
+    // MARK: W
 
     /// 钱包图标名称 (wallet.pass)
     static let iconWallet = "wallet.pass"
@@ -745,126 +1079,23 @@ public extension String {
     /// WiFi图标名称 (wifi)
     static let iconWiFi = "wifi"
 
+    // MARK: X
+
     /// Xcode图标名称 (hammer)
     static let iconXcode = "hammer"
 
     /// Xcode填充图标名称 (hammer.fill)
     static let iconXcodeFill = "hammer.fill"
 
+    // MARK: Z
+
     /// 压缩文档图标名称 (doc.zipper)
     static let iconZipDocument = "doc.zipper"
 
-    /// 全屏图标名称 (arrow.up.left.and.arrow.down.right)
-    static let iconFullscreen = "arrow.up.left.and.arrow.down.right"
-
-    /// 定位图标名称 (location)
-    static let iconLocation = "location"
-
-    /// 定位填充图标名称 (location.fill)
-    static let iconLocationFill = "location.fill"
-
-    /// 列表图标名称 (list.bullet)
-    static let iconList = "list.bullet"
-
-    /// 列表填充图标名称 (list.bullet.circle.fill)
-    static let iconListCircleFill = "list.bullet.circle.fill"
-
-    /// 列表圆形图标名称 (list.bullet.circle)
-    static let iconListCircle = "list.bullet.circle"
-
-    /// 日志图标名称 (text.alignleft)
-    static let iconLog = "text.alignleft"
-
-    /// 链接图标名称 (link)
-    static let iconLink = "link"
-
-    /// 链接图标名称 (link.circle)
-    static let iconLinkCircle = "link.circle"
-
-    /// 文件夹图标名称 (folder)
-    static let iconFolder = "folder"
-
-    /// 文件夹填充图标名称 (folder.fill)
-    static let iconFolderFill = "folder.fill"
-
-    /// 缩进增加图标名称 (increase.indent)
-    static let iconIndentIncrease = "increase.indent"
-
-    /// 缩进减少图标名称 (decrease.indent)
-    static let iconIndentDecrease = "decrease.indent"
-
-    /// 字体图标名称 (textformat)
-    static let iconFont = "textformat"
-
-    /// 字体大小图标名称 (textformat.size)
-    static let iconFontSize = "textformat.size"
-
-    /// 字体颜色图标名称 (textformat.alt)
-    static let iconFontColor = "textformat.alt"
-
-    /// 开发者设置图标名称 (hammer.circle)
-    static let iconDeveloperSetting = "hammer.circle"
-
-    /// 背景色图标名称 (paintbrush)
-    static let iconBackgroundColor = "paintbrush"
-
-    /// 地图图标名称 (map)
-    static let iconMaps = "map"
-
-    /// 地图填充图标名称 (map.fill)
-    static let iconMapsFill = "map.fill"
-
-    /// 信息图标名称 (message.badge)
-    static let iconMessages = "message.badge"
-
-    /// 信息填充图标名称 (message.badge.fill)
-    static let iconMessagesFill = "message.badge.fill"
-
-    /// 照片图标名称 (photo.on.rectangle)
-    static let iconPhotos = "photo.on.rectangle"
-
-    /// 照片填充图标名称 (photo.on.rectangle.fill)
-    static let iconPhotosFill = "photo.on.rectangle.fill"
-
-    /// 提醒事项图标名称 (list.bullet.rectangle)
-    static let iconReminders = "list.bullet.rectangle"
-
-    /// 提醒事项填充图标名称 (list.bullet.rectangle.fill)
-    static let iconRemindersFill = "list.bullet.rectangle.fill"
-
-    /// 密码图标名称 (key)
-    static let iconPasswords = "key"
-
-    /// 密码填充图标名称 (key.fill)
-    static let iconPasswordsFill = "key.fill"
-
-    /// 快捷指令图标名称 (command.square)
-    static let iconShortcuts = "command.square"
-
-    /// 快捷指令填充图标名称 (command.square.fill)
-    static let iconShortcutsFill = "command.square.fill"
-
-    /// 顶部工具栏图标 (menubar.rectangle)
-    static let iconTopToolbar = "menubar.rectangle"
-
-    /// 顶部工具栏填充图标 (menubar.dock.rectangle)
-    static let iconTopToolbarFill = "menubar.dock.rectangle"
-
-    /// 工具栏图标 (sidebar.left)
-    static let iconToolbar = "sidebar.left"
-
-    /// 工具栏填充图标 (sidebar.left.fill)
-    static let iconToolbarFill = "sidebar.left.fill"
-
-    /// 中速速度计图标名称 (gauge.high)
-    static let iconSpeedometerMedium = "gauge.high"
-
-    /// 高速速度计图标名称 (gauge.badge.plus)
-    static let iconSpeedometerHigh = "gauge.badge.plus"
 }
 
 #Preview("图标演示") {
     NavigationStack {
-        StringIconExtensionDemoView()
+        ImageExtensionDemoView()
     }
 }
