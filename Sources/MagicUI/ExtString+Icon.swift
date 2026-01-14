@@ -1094,8 +1094,10 @@ public extension String {
 
 }
 
+#if DEBUG
 #Preview("图标演示") {
     NavigationStack {
         ImageExtensionDemoView()
     }
 }
+#endif
