@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension View {
+public extension View {
     /// 将视图包装在材质背景的卡片中
     /// - Parameter material: 材质类型，默认为 ultraThinMaterial
     /// - Returns: 包装在卡片中的视图
