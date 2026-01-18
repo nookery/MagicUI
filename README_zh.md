@@ -2,20 +2,18 @@
 
 [![English](https://img.shields.io/badge/English-README-green)](README.md)
 
-一个适用于iOS和macOS应用的全面SwiftUI组件库。
+一个专注于 SwiftUI View 扩展的组件库，提供简洁优雅的链式调用 API。
 
 ## 功能特性
 
-- **按钮**: 可自定义样式的MagicButton，支持多种交互
-- **背景**: 美丽的动画背景组件
-- **图标**: 丰富的图标库，与SF Symbols集成
-- **卡片**: 灵活的卡片组件用于内容展示
-- **加载**: 加载指示器和进度视图
-- **设置**: 可配置的设置UI组件
-- **工具提示**: 高级工具提示系统
-- **形状**: 自定义形状组件
-- **桌面**: macOS桌面模拟组件
-- **扩展**: 增强功能的SwiftUI View扩展
+- **居中布局**: `magicCentered()` - 一键居中显示视图
+- **卡片样式**: `inCard()` - 多种材质和颜色卡片样式
+- **键值显示**: `withMagicValue()` - 优雅的键值对展示
+- **加载状态**: `loadingOverlay()`, `skeleton()` - 多种加载效果
+- **桌面布局**: `inDesktop()` - macOS 桌面风格布局
+- **图标样式**: 丰富的图标扩展和样式
+- **按钮增强**: MagicButton 组件及样式
+- **背景动画**: 美丽的动画背景效果
 
 ## 安装
 
@@ -37,7 +35,7 @@ dependencies: [
 
 ## 使用方法
 
-### MagicButton
+### 居中布局
 
 ```swift
 import SwiftUI
@@ -45,15 +43,16 @@ import MagicUI
 
 struct ContentView: View {
     var body: some View {
-        MagicButton("点击我") {
-            print("按钮被点击！")
+        VStack {
+            Text("居中显示的内容")
+                .font(.title)
+                .magicCentered()
         }
-        .buttonStyle(.magic)
     }
 }
 ```
 
-### MagicBackground
+### 卡片样式
 
 ```swift
 import SwiftUI
@@ -61,18 +60,62 @@ import MagicUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            MagicBackground(.ocean)
-            VStack {
-                Text("你好世界")
-                    .foregroundColor(.white)
+        VStack(spacing: 20) {
+            Text("基础卡片")
+                .inCardUltraThin()
+
+            Text("蓝色渐变卡片")
+                .foregroundColor(.white)
+                .inCard(gradient: [.blue, .purple])
+        }
+    }
+}
+```
+
+### 键值显示
+
+```swift
+import SwiftUI
+import MagicUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack(spacing: 12) {
+            Text("用户名")
+                .withMagicValue("admin")
+
+            Text("邮箱")
+                .withMagicValue("admin@example.com")
+                .withIcon(Image(systemName: "envelope"))
+        }
+    }
+}
+```
+
+### 加载状态
+
+```swift
+import SwiftUI
+import MagicUI
+
+struct ContentView: View {
+    @State private var isLoading = false
+
+    var body: some View {
+        VStack {
+            Text("主要内容")
+                .skeleton(isLoading: isLoading)
+
+            Button("开始加载") {
+                isLoading = true
             }
         }
+        .loadingOverlay(isLoading: isLoading, title: "正在加载...")
     }
 }
 ```
 
-### 图标扩展
+### 桌面布局
 
 ```swift
 import SwiftUI
@@ -80,43 +123,36 @@ import MagicUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            Image(systemName: "star.fill")
-                .iconStyle(.large)
-            Image(systemName: "heart.fill")
-                .iconStyle(.medium)
-        }
+        Text("桌面应用内容")
+            .inDesktop()
     }
 }
 ```
 
-## 组件
+## 扩展方法
 
-### 核心组件
-- `MagicButton` - 可自定义按钮组件
-- `MagicCard` - 内容展示卡片
-- `MagicCentered` - 居中内容包装器
-- `MagicFeature` - 功能展示组件
-- `MagicKeyValue` - 键值显示组件
+### 布局扩展
+- `magicCentered()` - 视图居中显示
+- `inDesktop()` - macOS 桌面风格布局
 
-### 背景
-- `MagicBackground` - 动画背景组件
-- `MagicBackgroundGroup` - 背景集合
+### 样式扩展
+- `inCard()` - 多种卡片样式（材质、颜色、渐变）
+- `inCardUltraThin()`, `inCardThin()`, `inCardRegular()`, `inCardThick()` - 预定义材质卡片
 
-### UI扩展
-- `View+MagicHStack` - 增强的HStack
-- `View+MagicVStack` - 增强的VStack
-- `View+MagicRounded` - 圆角扩展
-- `View+MagicTextGradient` - 文字渐变效果
+### 数据展示
+- `withMagicValue()` - 键值对显示
+- `withIcon()` - 为键值对添加图标
 
-### 设置
-- `MagicSettingView` - 设置UI组件
-- 各种设置行类型（开关、滑块、选择器）
+### 加载状态
+- `loadingOverlay()` - 全屏加载覆盖层
+- `loadingSpinner()` - 简单的加载指示器
+- `skeleton()` - 骨架屏效果
 
-### 图标与资源
-- 图标形状组件
-- 图标容器视图
-- 各种图标类型的图片扩展
+### 其他扩展
+- `iconStyle()` - 图标样式设置
+- `buttonStyle(.magic)` - MagicButton 样式
+- 背景动画组件
+- 设置UI组件
 
 ## 要求
 

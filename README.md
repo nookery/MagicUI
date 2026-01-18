@@ -2,20 +2,18 @@
 
 [![中文](https://img.shields.io/badge/中文-README-blue)](README_zh.md)
 
-A comprehensive SwiftUI component library for iOS and macOS applications.
+A SwiftUI component library focused on elegant View extensions with chainable APIs.
 
 ## Features
 
-- **Buttons**: Customizable MagicButton with various styles and interactions
-- **Backgrounds**: Beautiful animated background components
-- **Icons**: Extensive icon library with SF Symbols integration
-- **Cards**: Flexible card components for content display
-- **Loading**: Loading indicators and progress views
-- **Settings**: Configurable settings UI components
-- **Tooltips**: Advanced tooltip system
-- **Shapes**: Custom shape components
-- **Desktop**: macOS desktop simulation components
-- **Extensions**: SwiftUI View extensions for enhanced functionality
+- **Centering**: `magicCentered()` - One-click view centering
+- **Card Styles**: `inCard()` - Multiple material and color card styles
+- **Key-Value Display**: `withMagicValue()` - Elegant key-value presentation
+- **Loading States**: `loadingOverlay()`, `skeleton()` - Various loading effects
+- **Desktop Layout**: `inDesktop()` - macOS desktop-style layout
+- **Icon Styling**: Rich icon extensions and styles
+- **Enhanced Buttons**: MagicButton component with custom styles
+- **Animated Backgrounds**: Beautiful animated background effects
 
 ## Installation
 
@@ -37,7 +35,7 @@ Or add it directly in Xcode:
 
 ## Usage
 
-### MagicButton
+### Centering Layout
 
 ```swift
 import SwiftUI
@@ -45,15 +43,16 @@ import MagicUI
 
 struct ContentView: View {
     var body: some View {
-        MagicButton("Click Me") {
-            print("Button tapped!")
+        VStack {
+            Text("Centered Content")
+                .font(.title)
+                .magicCentered()
         }
-        .buttonStyle(.magic)
     }
 }
 ```
 
-### MagicBackground
+### Card Styles
 
 ```swift
 import SwiftUI
@@ -61,18 +60,62 @@ import MagicUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            MagicBackground(.ocean)
-            VStack {
-                Text("Hello World")
-                    .foregroundColor(.white)
+        VStack(spacing: 20) {
+            Text("Basic Card")
+                .inCardUltraThin()
+
+            Text("Blue Gradient Card")
+                .foregroundColor(.white)
+                .inCard(gradient: [.blue, .purple])
+        }
+    }
+}
+```
+
+### Key-Value Display
+
+```swift
+import SwiftUI
+import MagicUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack(spacing: 12) {
+            Text("Username")
+                .withMagicValue("admin")
+
+            Text("Email")
+                .withMagicValue("admin@example.com")
+                .withIcon(Image(systemName: "envelope"))
+        }
+    }
+}
+```
+
+### Loading States
+
+```swift
+import SwiftUI
+import MagicUI
+
+struct ContentView: View {
+    @State private var isLoading = false
+
+    var body: some View {
+        VStack {
+            Text("Main Content")
+                .skeleton(isLoading: isLoading)
+
+            Button("Start Loading") {
+                isLoading = true
             }
         }
+        .loadingOverlay(isLoading: isLoading, title: "Loading...")
     }
 }
 ```
 
-### Icon Extensions
+### Desktop Layout
 
 ```swift
 import SwiftUI
@@ -80,43 +123,36 @@ import MagicUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            Image(systemName: "star.fill")
-                .iconStyle(.large)
-            Image(systemName: "heart.fill")
-                .iconStyle(.medium)
-        }
+        Text("Desktop App Content")
+            .inDesktop()
     }
 }
 ```
 
-## Components
+## Extensions
 
-### Core Components
-- `MagicButton` - Customizable button component
-- `MagicCard` - Content display card
-- `MagicCentered` - Centered content wrapper
-- `MagicFeature` - Feature showcase component
-- `MagicKeyValue` - Key-value display component
+### Layout Extensions
+- `magicCentered()` - Center views with one method
+- `inDesktop()` - macOS desktop-style layout
 
-### Backgrounds
-- `MagicBackground` - Animated background component
-- `MagicBackgroundGroup` - Background collection
+### Style Extensions
+- `inCard()` - Multiple card styles (materials, colors, gradients)
+- `inCardUltraThin()`, `inCardThin()`, `inCardRegular()`, `inCardThick()` - Predefined material cards
 
-### UI Extensions
-- `View+MagicHStack` - Enhanced HStack
-- `View+MagicVStack` - Enhanced VStack
-- `View+MagicRounded` - Rounded corner extensions
-- `View+MagicTextGradient` - Text gradient effects
+### Data Display
+- `withMagicValue()` - Key-value pair display
+- `withIcon()` - Add icons to key-value pairs
 
-### Settings
-- `MagicSettingView` - Settings UI components
-- Various setting row types (Toggle, Slider, Picker)
+### Loading States
+- `loadingOverlay()` - Full-screen loading overlay
+- `loadingSpinner()` - Simple loading indicator
+- `skeleton()` - Skeleton screen effect
 
-### Icons & Assets
-- Icon shape components
-- Icon container views
-- Image extensions for various icon types
+### Other Extensions
+- `iconStyle()` - Icon styling
+- `buttonStyle(.magic)` - MagicButton styles
+- Animated background components
+- Settings UI components
 
 ## Requirements
 
