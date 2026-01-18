@@ -290,29 +290,4 @@ extension MagicBackground {
 }
 
 // MARK: - View Extensions
-extension View {
-/// 应用宇宙尘埃背景效果
-    public func inMagicBackgroundCosmicDust(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.cosmicDust.opacity(opacity))
-    }
-    
-/// 应用银河螺旋背景效果
-    public func inMagicBackgroundGalaxySpiral(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.galaxySpiral.opacity(opacity))
-    }
-    
-/// 应用星云迷雾背景效果
-    public func inMagicBackgroundNebulaMist(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.nebulaMist.opacity(opacity))
-    }
-    
-/// 应用暗物质背景效果
-    public func inMagicBackgroundDarkMatter(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.darkMatter.opacity(opacity))
-    }
-    
-/// 应用宇宙传送门背景效果
-    public func inMagicBackgroundCosmicPortal(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.cosmicPortal.opacity(opacity))
-    }
-}
+

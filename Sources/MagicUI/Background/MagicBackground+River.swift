@@ -185,19 +185,4 @@ extension MagicBackground {
 }
 
 // MARK: - View Extensions
-extension View {
-    /// 应用山间溪流背景效果
-    public func inMagicBackgroundMountainStream(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.mountainStream.opacity(opacity))
-    }
-    
-    /// 应用平静河流背景效果
-    public func inMagicBackgroundCalmRiver(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.calmRiver.opacity(opacity))
-    }
-    
-    /// 应用瀑布河流背景效果
-    public func inMagicBackgroundCascadingRiver(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.cascadingRiver.opacity(opacity))
-    }
-}
+

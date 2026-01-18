@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(swift build:*)",
+      "Bash(grep:*)",
+      "Bash(for file in *.swift)",
+      "Bash(do awk:*)",
+      "Bash(cat:*)"
+    ]
+  }
+}

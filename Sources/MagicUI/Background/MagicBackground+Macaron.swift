@@ -184,29 +184,4 @@ extension MagicBackground {
 }
 
 // MARK: - View Extensions
-extension View {
-/// 应用香草马卡龙背景效果
-    public func inMagicBackgroundVanillaMacaron(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.vanillaMacaron.opacity(opacity))
-    }
-    
-/// 应用玫瑰马卡龙背景效果
-    public func inMagicBackgroundRoseMacaron(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.roseMacaron.opacity(opacity))
-    }
-    
-/// 应用薰衣草马卡龙背景效果
-    public func inMagicBackgroundLavenderMacaron(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.lavenderMacaron.opacity(opacity))
-    }
-    
-/// 应用薄荷马卡龙背景效果
-    public func inMagicBackgroundMintMacaron(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.mintMacaron.opacity(opacity))
-    }
-    
-/// 应用柠檬马卡龙背景效果
-    public func inMagicBackgroundLemonMacaron(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.lemonMacaron.opacity(opacity))
-    }
-}
+

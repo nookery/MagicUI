@@ -151,19 +151,4 @@ extension MagicBackground {
 }
 
 // MARK: - View Extensions
-extension View {
-/// 应用神秘森林背景效果
-    public func inMagicBackgroundMysticalForest(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.mysticalForest.opacity(opacity))
-    }
-    
-/// 应用魔法森林背景效果
-    public func inMagicBackgroundEnchantedGrove(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.enchantedGrove.opacity(opacity))
-    }
-    
-/// 应用深林背景效果
-    public func inMagicBackgroundDeepForest(_ opacity: Double = 1.0) -> some View {
-        self.background(MagicBackground.deepForest.opacity(opacity))
-    }
-}
+
