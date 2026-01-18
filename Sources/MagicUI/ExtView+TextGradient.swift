@@ -165,71 +165,159 @@ public extension View {
 // MARK: - Preview
 
 #if DEBUG
-    #Preview("Magic Text Gradient - Basic") {
-        Text("Hello MagicKit!")
-            .font(.system(size: 60, weight: .bold, design: .rounded))
-            .magicGradient(colors: [.blue, .purple])
-            .frame(width: 500, height: 100)
-            .background(Color.gray.opacity(0.1))
-    }
+#Preview("Magic Text Gradient - All Examples") {
+    ScrollView {
+        VStack(spacing: 30) {
+            // 标题
+            VStack(spacing: 10) {
+                Text("Magic Text Gradient")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
 
-    #Preview("Magic Text Gradient - Rainbow") {
-        Text("Rainbow")
-            .font(.system(size: 50, weight: .bold, design: .rounded))
-            .magicRainbowGradient()
-            .frame(width: 400, height: 100)
-            .background(Color.gray.opacity(0.1))
-    }
+                Text("文字渐变色效果展示")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+            .padding(.bottom, 20)
 
-    #Preview("Magic Text Gradient - Blue Purple") {
-        Text("Blue Purple")
-            .font(.system(size: 50, weight: .bold, design: .rounded))
-            .magicBluePurpleGradient()
-            .frame(width: 400, height: 100)
-            .background(Color.gray.opacity(0.1))
-    }
+            // 基础示例
+            VStack(alignment: .leading, spacing: 15) {
+                Text("基础渐变")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal)
 
-    #Preview("Magic Text Gradient - Sunset") {
-        Text("Sunset")
-            .font(.system(size: 50, weight: .bold, design: .rounded))
-            .magicSunsetGradient()
-            .frame(width: 400, height: 100)
-            .background(Color.gray.opacity(0.1))
-    }
+                Text("Hello MagicKit!")
+                    .font(.system(size: 60, weight: .bold, design: .rounded))
+                    .magicGradient(colors: [.blue, .purple])
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 100)
+                    .background(Color.gray.opacity(0.1))
+                    .padding(.horizontal)
+            }
 
-    #Preview("Magic Text Gradient - Ocean") {
-        Text("Ocean")
-            .font(.system(size: 50, weight: .bold, design: .rounded))
-            .magicOceanGradient()
-            .frame(width: 400, height: 100)
-            .background(Color.gray.opacity(0.1))
-    }
+            // 预设渐变
+            VStack(alignment: .leading, spacing: 15) {
+                Text("预设渐变")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal)
 
-    #Preview("Magic Text Gradient - Vertical") {
-        Text("Vertical")
-            .font(.system(size: 50, weight: .bold, design: .rounded))
-            .magicVerticalGradient(colors: [.green, .blue])
-            .frame(width: 400, height: 100)
-            .background(Color.gray.opacity(0.1))
-    }
+                Group {
+                    Text("Rainbow")
+                        .font(.system(size: 50, weight: .bold, design: .rounded))
+                        .magicRainbowGradient()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                        .background(Color.gray.opacity(0.1))
+                        .padding(.horizontal)
 
-    #Preview("Magic Text Gradient - Diagonal") {
-        Text("Diagonal")
-            .font(.system(size: 50, weight: .bold, design: .rounded))
-            .magicDiagonalGradient(colors: [.red, .yellow])
-            .frame(width: 400, height: 100)
-            .background(Color.gray.opacity(0.1))
-    }
+                    Text("Blue Purple")
+                        .font(.system(size: 50, weight: .bold, design: .rounded))
+                        .magicBluePurpleGradient()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                        .background(Color.gray.opacity(0.1))
+                        .padding(.horizontal)
 
-    #Preview("Magic Text Gradient - Custom") {
-        Text("Custom")
-            .font(.system(size: 50, weight: .bold, design: .rounded))
-            .magicGradient(
-                colors: [.pink, .purple, .blue],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .frame(width: 400, height: 100)
-            .background(Color.gray.opacity(0.1))
+                    Text("Sunset")
+                        .font(.system(size: 50, weight: .bold, design: .rounded))
+                        .magicSunsetGradient()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                        .background(Color.gray.opacity(0.1))
+                        .padding(.horizontal)
+
+                    Text("Ocean")
+                        .font(.system(size: 50, weight: .bold, design: .rounded))
+                        .magicOceanGradient()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                        .background(Color.gray.opacity(0.1))
+                        .padding(.horizontal)
+                }
+            }
+
+            // 方向渐变
+            VStack(alignment: .leading, spacing: 15) {
+                Text("方向渐变")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal)
+
+                Group {
+                    Text("Vertical")
+                        .font(.system(size: 50, weight: .bold, design: .rounded))
+                        .magicVerticalGradient(colors: [.green, .blue])
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                        .background(Color.gray.opacity(0.1))
+                        .padding(.horizontal)
+
+                    Text("Diagonal")
+                        .font(.system(size: 50, weight: .bold, design: .rounded))
+                        .magicDiagonalGradient(colors: [.red, .yellow])
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                        .background(Color.gray.opacity(0.1))
+                        .padding(.horizontal)
+                }
+            }
+
+            // 自定义渐变
+            VStack(alignment: .leading, spacing: 15) {
+                Text("自定义渐变")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal)
+
+                Text("Custom")
+                    .font(.system(size: 50, weight: .bold, design: .rounded))
+                    .magicGradient(
+                        colors: [.pink, .purple, .blue],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 100)
+                    .background(Color.gray.opacity(0.1))
+                    .padding(.horizontal)
+            }
+
+            // 使用说明
+            VStack(alignment: .leading, spacing: 10) {
+                Text("使用方法")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+
+                VStack(alignment: .leading, spacing: 8) {
+                    CodeLine(code: "Text(\"Hello\").magicGradient(colors: [.blue, .purple])")
+                    CodeLine(code: "Text(\"Rainbow\").magicRainbowGradient()")
+                    CodeLine(code: "Text(\"Ocean\").magicOceanGradient()")
+                    CodeLine(code: "Text(\"Custom\").magicVerticalGradient(colors: [.red, .blue])")
+                }
+                .padding()
+                .background(Color.secondary.opacity(0.1))
+                .cornerRadius(8)
+            }
+            .padding(.horizontal)
+        }
+        .padding(.vertical, 30)
     }
+    .frame(height: 750)
+}
+
+// MARK: - Helper Views
+
+private struct CodeLine: View {
+    let code: String
+
+    var body: some View {
+        Text(code)
+            .font(.system(.body, design: .monospaced))
+            .foregroundColor(.primary)
+            .padding(.vertical, 4)
+    }
+}
+
 #endif
