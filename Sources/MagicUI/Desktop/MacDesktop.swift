@@ -152,29 +152,3 @@ struct MacDesktop<Content: View>: View {
         }
     }
 }
-
-// MARK: - View Extension
-
-public extension View {
-    /// 将视图包装在 MacDesktop 中
-    func inDesktop() -> some View {
-        MacDesktop {
-            self
-        }
-    }
-}
-
-// MARK: - Preview
-
-#Preview("App Store Desktop - Large") {
-    MacDesktop {
-        Text("Hello, World!")
-    }
-}
-
-#Preview("App Store Desktop - Small") {
-    MacDesktop {
-        Text("Hello, World!")
-    }
-    .frame(width: 800, height: 600)
-}
