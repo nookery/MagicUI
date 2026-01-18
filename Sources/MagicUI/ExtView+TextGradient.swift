@@ -160,6 +160,157 @@ public extension View {
             endPoint: .bottomTrailing
         )
     }
+
+    // MARK: - Fruit Inspired Gradients
+
+    /// 为文字添加柠檬渐变色效果（明黄到淡黄）
+    func magicLemonGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "FFF44F"), Color(hex: "FFE066")]
+        )
+    }
+
+    /// 为文字添加橙子渐变色效果（橙色到金黄）
+    func magicOrangeGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "FF9500"), Color(hex: "FF5E3A")]
+        )
+    }
+
+    /// 为文字添加草莓渐变色效果（深红到粉红）
+    func magicStrawberryGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "FF6B6B"), Color(hex: "FF8E8E")]
+        )
+    }
+
+    /// 为文字添加蓝莓渐变色效果（深蓝到紫蓝）
+    func magicBlueberryGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "4169E1"), Color(hex: "6B5CED")]
+        )
+    }
+
+    /// 为文字添加葡萄渐变色效果（紫到深紫）
+    func magicGrapeGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "9B59B6"), Color(hex: "8E44AD")]
+        )
+    }
+
+    /// 为文字添加西瓜渐变色效果（红到绿）
+    func magicWatermelonGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "FF6B6B"), Color(hex: "98FB98")]
+        )
+    }
+
+    /// 为文字添加桃子渐变色效果（粉到橙粉）
+    func magicPeachGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "FFDAB9"), Color(hex: "FFB6C1")]
+        )
+    }
+
+    /// 为文字添加薄荷渐变色效果（清新的绿色）
+    func magicMintGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "98FF98"), Color(hex: "00FF7F")]
+        )
+    }
+
+    /// 为文字添加樱桃渐变色效果（鲜红到暗红）
+    func magicCherryGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "DE3163"), Color(hex: "FF4040")]
+        )
+    }
+
+    /// 为文字添加芒果渐变色效果（金黄到橙黄）
+    func magicMangoGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "FFD700"), Color(hex: "FFA500")]
+        )
+    }
+
+    // MARK: - Nature Inspired Gradients
+
+    /// 为文字添加森林渐变色效果（深绿到浅绿）
+    func magicForestGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "228B22"), Color(hex: "32CD32")]
+        )
+    }
+
+    /// 为文字添加天空渐变色效果（天蓝到淡蓝）
+    func magicSkyGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "87CEEB"), Color(hex: "B0E0E6")]
+        )
+    }
+
+    /// 为文字添加极光渐变色效果（紫到粉到青）
+    func magicAuroraGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "9B59B6"), Color(hex: "FF69B4"), Color(hex: "00CED1")]
+        )
+    }
+
+    /// 为文字添加大地渐变色效果（深棕到浅棕）
+    func magicEarthGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "8B4513"), Color(hex: "D2691E")]
+        )
+    }
+
+    /// 为文字添加雪山渐变色效果（白到冰蓝）
+    func magicSnowGradient() -> some View {
+        magicGradient(
+            colors: [Color.white, Color(hex: "E0FFFF")]
+        )
+    }
+
+    /// 为文字添加沙漠渐变色效果（金黄到沙黄）
+    func magicDesertGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "EDC9AF"), Color(hex: "F4A460")]
+        )
+    }
+
+    /// 为文字添加火山渐变色效果（红到橙到黄）
+    func magicVolcanoGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "FF4500"), Color(hex: "FF6347"), Color(hex: "FFD700")]
+        )
+    }
+
+    /// 为文字添加竹子渐变色效果（翠绿到深绿）
+    func magicBambooGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "7CFC00"), Color(hex: "228B22")]
+        )
+    }
+
+    /// 为文字添加黄昏渐变色效果（橙红到紫）
+    func magicDuskGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "FF6B6B"), Color(hex: "9370DB")]
+        )
+    }
+
+    /// 为文字添加黎明渐变色效果（粉到橙到黄）
+    func magicDawnGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "FFB6C1"), Color(hex: "FFA07A"), Color(hex: "FFD700")]
+        )
+    }
+
+    /// 为文字添加珊瑚渐变色效果（粉红到橙红）
+    func magicCoralGradient() -> some View {
+        magicGradient(
+            colors: [Color(hex: "FF7F50"), Color(hex: "FF6347")]
+        )
+    }
 }
 
 // MARK: - Preview
@@ -170,7 +321,7 @@ public extension View {
         VStack(spacing: 30) {
             // 标题
             VStack(spacing: 10) {
-                Text("Magic Text Gradient")
+                Text("🎨 Magic Text Gradient")
                     .font(.largeTitle)
                     .fontWeight(.bold)
 
@@ -178,15 +329,11 @@ public extension View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
-            .padding(.bottom, 20)
+            .padding(.bottom, 10)
 
             // 基础示例
             VStack(alignment: .leading, spacing: 15) {
-                Text("基础渐变")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .padding(.horizontal)
-
+                SectionHeader(title: "基础渐变", icon: "sparkles")
                 Text("Hello MagicKit!")
                     .font(.system(size: 60, weight: .bold, design: .rounded))
                     .magicGradient(colors: [.blue, .purple])
@@ -198,102 +345,71 @@ public extension View {
 
             // 预设渐变
             VStack(alignment: .leading, spacing: 15) {
-                Text("预设渐变")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .padding(.horizontal)
+                SectionHeader(title: "经典渐变", icon: "paintpalette")
 
                 Group {
-                    Text("Rainbow")
-                        .font(.system(size: 50, weight: .bold, design: .rounded))
-                        .magicRainbowGradient()
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 100)
-                        .background(Color.gray.opacity(0.1))
-                        .padding(.horizontal)
+                    GradientPreview(text: "Rainbow", gradient: Text("Rainbow").magicRainbowGradient())
+                    GradientPreview(text: "Blue Purple", gradient: Text("Blue Purple").magicBluePurpleGradient())
+                    GradientPreview(text: "Sunset", gradient: Text("Sunset").magicSunsetGradient())
+                    GradientPreview(text: "Ocean", gradient: Text("Ocean").magicOceanGradient())
+                }
+            }
 
-                    Text("Blue Purple")
-                        .font(.system(size: 50, weight: .bold, design: .rounded))
-                        .magicBluePurpleGradient()
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 100)
-                        .background(Color.gray.opacity(0.1))
-                        .padding(.horizontal)
+            // 水果主题
+            VStack(alignment: .leading, spacing: 15) {
+                SectionHeader(title: "水果主题 🍋🍊🍓", icon: "leaf")
 
-                    Text("Sunset")
-                        .font(.system(size: 50, weight: .bold, design: .rounded))
-                        .magicSunsetGradient()
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 100)
-                        .background(Color.gray.opacity(0.1))
-                        .padding(.horizontal)
+                Group {
+                    GradientPreview(text: "Lemon", gradient: Text("🍋 Lemon").magicLemonGradient())
+                    GradientPreview(text: "Orange", gradient: Text("🍊 Orange").magicOrangeGradient())
+                    GradientPreview(text: "Strawberry", gradient: Text("🍓 Strawberry").magicStrawberryGradient())
+                    GradientPreview(text: "Blueberry", gradient: Text("🫐 Blueberry").magicBlueberryGradient())
+                    GradientPreview(text: "Grape", gradient: Text("🍇 Grape").magicGrapeGradient())
+                    GradientPreview(text: "Watermelon", gradient: Text("🍉 Watermelon").magicWatermelonGradient())
+                    GradientPreview(text: "Peach", gradient: Text("🍑 Peach").magicPeachGradient())
+                    GradientPreview(text: "Mint", gradient: Text("🌿 Mint").magicMintGradient())
+                    GradientPreview(text: "Cherry", gradient: Text("🍒 Cherry").magicCherryGradient())
+                    GradientPreview(text: "Mango", gradient: Text("🥭 Mango").magicMangoGradient())
+                }
+            }
 
-                    Text("Ocean")
-                        .font(.system(size: 50, weight: .bold, design: .rounded))
-                        .magicOceanGradient()
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 100)
-                        .background(Color.gray.opacity(0.1))
-                        .padding(.horizontal)
+            // 自然主题
+            VStack(alignment: .leading, spacing: 15) {
+                SectionHeader(title: "自然主题 🌲🌅", icon: "leaf.fill")
+
+                Group {
+                    GradientPreview(text: "Forest", gradient: Text("🌲 Forest").magicForestGradient())
+                    GradientPreview(text: "Sky", gradient: Text("🌤️ Sky").magicSkyGradient())
+                    GradientPreview(text: "Aurora", gradient: Text("✨ Aurora").magicAuroraGradient())
+                    GradientPreview(text: "Snow", gradient: Text("❄️ Snow").magicSnowGradient())
+                    GradientPreview(text: "Desert", gradient: Text("🏜️ Desert").magicDesertGradient())
+                    GradientPreview(text: "Bamboo", gradient: Text("🎋 Bamboo").magicBambooGradient())
+                    GradientPreview(text: "Dusk", gradient: Text("🌆 Dusk").magicDuskGradient())
+                    GradientPreview(text: "Dawn", gradient: Text("🌅 Dawn").magicDawnGradient())
+                    GradientPreview(text: "Coral", gradient: Text("🪸 Coral").magicCoralGradient())
+                    GradientPreview(text: "Volcano", gradient: Text("🌋 Volcano").magicVolcanoGradient())
                 }
             }
 
             // 方向渐变
             VStack(alignment: .leading, spacing: 15) {
-                Text("方向渐变")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .padding(.horizontal)
+                SectionHeader(title: "方向渐变", icon: "arrow.up.arrow.down")
 
                 Group {
-                    Text("Vertical")
-                        .font(.system(size: 50, weight: .bold, design: .rounded))
-                        .magicVerticalGradient(colors: [.green, .blue])
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 100)
-                        .background(Color.gray.opacity(0.1))
-                        .padding(.horizontal)
-
-                    Text("Diagonal")
-                        .font(.system(size: 50, weight: .bold, design: .rounded))
-                        .magicDiagonalGradient(colors: [.red, .yellow])
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 100)
-                        .background(Color.gray.opacity(0.1))
-                        .padding(.horizontal)
+                    GradientPreview(text: "Vertical", gradient: Text("Vertical").magicVerticalGradient(colors: [.green, .blue]))
+                    GradientPreview(text: "Diagonal", gradient: Text("Diagonal").magicDiagonalGradient(colors: [.red, .yellow]))
                 }
-            }
-
-            // 自定义渐变
-            VStack(alignment: .leading, spacing: 15) {
-                Text("自定义渐变")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .padding(.horizontal)
-
-                Text("Custom")
-                    .font(.system(size: 50, weight: .bold, design: .rounded))
-                    .magicGradient(
-                        colors: [.pink, .purple, .blue],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 100)
-                    .background(Color.gray.opacity(0.1))
-                    .padding(.horizontal)
             }
 
             // 使用说明
             VStack(alignment: .leading, spacing: 10) {
-                Text("使用方法")
-                    .font(.title2)
-                    .fontWeight(.semibold)
+                SectionHeader(title: "使用方法", icon: "doc.text")
 
                 VStack(alignment: .leading, spacing: 8) {
                     CodeLine(code: "Text(\"Hello\").magicGradient(colors: [.blue, .purple])")
                     CodeLine(code: "Text(\"Rainbow\").magicRainbowGradient()")
-                    CodeLine(code: "Text(\"Ocean\").magicOceanGradient()")
+                    CodeLine(code: "Text(\"🍋 Lemon\").magicLemonGradient()")
+                    CodeLine(code: "Text(\"🌲 Forest\").magicForestGradient()")
                     CodeLine(code: "Text(\"Custom\").magicVerticalGradient(colors: [.red, .blue])")
                 }
                 .padding()
@@ -308,6 +424,35 @@ public extension View {
 }
 
 // MARK: - Helper Views
+
+private struct SectionHeader: View {
+    let title: String
+    let icon: String
+
+    var body: some View {
+        HStack(spacing: 8) {
+            Image(systemName: icon)
+            Text(title)
+                .font(.title2)
+                .fontWeight(.semibold)
+        }
+        .padding(.horizontal)
+    }
+}
+
+private struct GradientPreview<Content: View>: View {
+    let text: String
+    let gradient: Content
+
+    var body: some View {
+        gradient
+            .font(.system(size: 40, weight: .bold, design: .rounded))
+            .frame(maxWidth: .infinity)
+            .frame(height: 80)
+            .background(Color.gray.opacity(0.1))
+            .padding(.horizontal)
+    }
+}
 
 private struct CodeLine: View {
     let code: String
