@@ -18,7 +18,7 @@ let package = Package(
     targets: [
         .target(
             name: "MagicUI",
-            resources: [.process("Desktop/Icons.xcassets")]
+            resources: [.process("Icons.xcassets")]
         ),
         .testTarget(
             name: "MagicUITests",
