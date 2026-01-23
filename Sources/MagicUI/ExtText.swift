@@ -5,12 +5,6 @@ import SwiftUI
 public extension Text {
     // MARK: - Font Weight
 
-    /// 设置文字为粗体
-    /// - Returns: 粗体文字
-    func bold() -> Text {
-        self.fontWeight(.bold)
-    }
-
     /// 设置文字为半粗体
     /// - Returns: 半粗体文字
     func semibold() -> Text {
