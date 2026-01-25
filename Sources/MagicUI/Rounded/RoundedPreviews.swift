@@ -4,12 +4,6 @@ import SwiftUI
 struct RoundedPreviews: View {
     var body: some View {
         VStack(spacing: 30) {
-            // Title
-            Text("Magic Rounded Extensions")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.bottom, 10)
-
             // Rounded Sizes
             VStack(spacing: 15) {
                 Text("Rounded Sizes")
@@ -23,8 +17,7 @@ struct RoundedPreviews: View {
                     roundedButton("XLarge", radius: 24, color: .purple)
                 }
             }
-            .padding()
-            .background(Color.gray.opacity(0.1))
+            .inCard()
             .magicRoundedMedium()
 
             // Special Shapes
@@ -51,8 +44,7 @@ struct RoundedPreviews: View {
                         .magicCircle()
                 }
             }
-            .padding()
-            .background(Color.gray.opacity(0.1))
+            .inCard()
             .magicRoundedMedium()
 
             // Custom Rounded
@@ -102,8 +94,7 @@ struct RoundedPreviews: View {
                         )
                 }
             }
-            .padding()
-            .background(Color.gray.opacity(0.1))
+            .inCard()
             .magicRoundedMedium()
 
             // Style Presets
@@ -134,8 +125,7 @@ struct RoundedPreviews: View {
                         .magicButtonRounded()
                 }
             }
-            .padding()
-            .background(Color.gray.opacity(0.1))
+            .inCard()
             .magicRoundedMedium()
 
             // Comparison with Shadow
@@ -182,8 +172,7 @@ struct RoundedPreviews: View {
                     }
                 }
             }
-            .padding()
-            .background(Color.gray.opacity(0.1))
+            .inCard()
             .magicRoundedMedium()
 
             // MagicButton with Rounded
@@ -239,11 +228,11 @@ struct RoundedPreviews: View {
                         )
                 }
             }
-            .padding()
-            .background(Color.gray.opacity(0.1))
+            .inCard()
             .magicRoundedMedium()
         }
         .padding()
+        .infinite()
         .inScrollView()
     }
 
