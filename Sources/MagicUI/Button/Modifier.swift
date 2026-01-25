@@ -12,7 +12,7 @@ struct DisabledWithReasonModifier: ViewModifier {
             .overlay {
                 // overlay 始终存在（只要 isDisabled），避免因 showingPopover 变化导致重新创建
                 if isDisabled {
-                    Color.red
+                    Color.clear
                         .contentShape(Rectangle())
                         .onTapGesture {
                             // 只在 popover 未显示时触发
