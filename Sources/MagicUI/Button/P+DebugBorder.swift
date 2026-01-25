@@ -15,7 +15,6 @@ struct DebugBorderButtonsPreview: View {
                         .magicDebugBorder()
 
                     MagicButton(icon: "star")
-                        .magicShape(.circle)
                         .magicDebugBorder()
                 }
             }

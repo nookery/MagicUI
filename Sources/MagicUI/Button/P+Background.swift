@@ -29,16 +29,13 @@ import SwiftUI
                     Text("不同形状").font(.subheadline)
                     HStack(spacing: 16) {
                         MagicButton(icon: "star")
-                            .magicShape(.circle)
                             .magicBackgroundColor(.purple)
 
                         MagicButton(icon: "star")
-                            .magicShape(.roundedSquare)
                             .magicBackgroundColor(.orange)
 
                         MagicButton(icon: "star")
                             .magicTitle("Capsule")
-                            .magicShape(.capsule)
                             .magicBackgroundColor(.mint)
                     }
                 }

@@ -45,16 +45,13 @@ struct InteractiveButtonsPreview: View {
                     // 只显示图标，标题作为 tooltip
                     MagicButton(icon: "star")
                         .magicTitle("收藏") // 设置标题但不显示
-                        .magicShape(.circle)
                     
                     MagicButton(icon: "heart")
                         .magicTitle("喜欢") // 设置标题但不显示
-                        .magicShape(.roundedSquare)
                         .magicStyle(.primary)
 
                     MagicButton(icon: "bell")
                         .magicTitle("通知") // 设置标题但不显示
-                        .magicShape(.circle)
                         .magicBackgroundColor(.orange)
                 }
                 .padding(.vertical)

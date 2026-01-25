@@ -12,7 +12,6 @@ public extension String {
             icon: self,
             style: .secondary,
             size: .regular,
-            shape: .roundedRectangle,
             popoverContent: AnyView(
                 ImageExtensionDemoView()
                     .frame(width: 500)

@@ -177,5 +177,7 @@ public extension View {
 // MARK: - Preview
 
 #Preview {
-    MagicRoundedPreviews()
+    RoundedPreviews()
+        .frame(height: 600)
+        .frame(width: 500)
 }

@@ -51,20 +51,16 @@ import SwiftUI
                         MagicButton(icon: "star")
                             .magicTitle("Mini")
                             .magicSize(.mini)
-                            .magicShape(.roundedRectangle)
 
                         MagicButton(icon: "star")
                             .magicSize(.mini)
-                            .magicShape(.circle)
 
                         MagicButton(icon: "star")
                             .magicTitle("Mini")
                             .magicSize(.mini)
-                            .magicShape(.capsule)
 
                         MagicButton(icon: "star")
                             .magicSize(.mini)
-                            .magicShape(.roundedSquare)
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -77,20 +73,16 @@ import SwiftUI
                         MagicButton(icon: "star")
                             .magicTitle("Small")
                             .magicSize(.small)
-                            .magicShape(.roundedRectangle)
 
                         MagicButton(icon: "star")
                             .magicSize(.small)
-                            .magicShape(.circle)
 
                         MagicButton(icon: "star")
                             .magicTitle("Small")
                             .magicSize(.small)
-                            .magicShape(.capsule)
 
                         MagicButton(icon: "star")
                             .magicSize(.small)
-                            .magicShape(.roundedSquare)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -103,20 +95,16 @@ import SwiftUI
                         MagicButton(icon: "star")
                             .magicTitle("Regular")
                             .magicSize(.regular)
-                            .magicShape(.roundedRectangle)
 
                         MagicButton(icon: "star")
                             .magicSize(.regular)
-                            .magicShape(.circle)
 
                         MagicButton(icon: "star")
                             .magicTitle("Regular")
                             .magicSize(.regular)
-                            .magicShape(.capsule)
 
                         MagicButton(icon: "star")
                             .magicSize(.regular)
-                            .magicShape(.roundedSquare)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -129,20 +117,16 @@ import SwiftUI
                         MagicButton(icon: "star")
                             .magicTitle("Large")
                             .magicSize(.large)
-                            .magicShape(.roundedRectangle)
 
                         MagicButton(icon: "star")
                             .magicSize(.large)
-                            .magicShape(.circle)
 
                         MagicButton(icon: "star")
                             .magicTitle("Large")
                             .magicSize(.large)
-                            .magicShape(.capsule)
 
                         MagicButton(icon: "star")
                             .magicSize(.large)
-                            .magicShape(.roundedSquare)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -155,20 +139,16 @@ import SwiftUI
                         MagicButton(icon: "star")
                             .magicTitle("Extra Large")
                             .magicSize(.extraLarge)
-                            .magicShape(.roundedRectangle)
 
                         MagicButton(icon: "star")
                             .magicSize(.extraLarge)
-                            .magicShape(.circle)
 
                         MagicButton(icon: "star")
                             .magicTitle("Extra Large")
                             .magicSize(.extraLarge)
-                            .magicShape(.capsule)
 
                         MagicButton(icon: "star")
                             .magicSize(.extraLarge)
-                            .magicShape(.roundedSquare)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -181,20 +161,16 @@ import SwiftUI
                         MagicButton(icon: "star")
                             .magicTitle("Huge")
                             .magicSize(.huge)
-                            .magicShape(.roundedRectangle)
 
                         MagicButton(icon: "star")
                             .magicSize(.huge)
-                            .magicShape(.circle)
 
                         MagicButton(icon: "star")
                             .magicTitle("Huge")
                             .magicSize(.huge)
-                            .magicShape(.capsule)
 
                         MagicButton(icon: "star")
                             .magicSize(.huge)
-                            .magicShape(.roundedSquare)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -207,51 +183,39 @@ import SwiftUI
                         HStack(spacing: 16) {
                             MagicButton(icon: "star", size: .custom(40))
                                 .magicTitle("40")
-                                .magicShape(.roundedRectangle)
 
                             MagicButton(icon: "star", size: .custom(40))
-                                .magicShape(.circle)
 
                             MagicButton(icon: "star", size: .custom(40))
                                 .magicTitle("40")
-                                .magicShape(.capsule)
 
                             MagicButton(icon: "star", size: .custom(40))
-                                .magicShape(.roundedSquare)
                         }
 
                         // 60 尺寸
                         HStack(spacing: 16) {
                             MagicButton(icon: "star", size: .custom(60))
                                 .magicTitle("60")
-                                .magicShape(.roundedRectangle)
 
                             MagicButton(icon: "star", size: .custom(60))
-                                .magicShape(.circle)
 
                             MagicButton(icon: "star", size: .custom(60))
                                 .magicTitle("60")
-                                .magicShape(.capsule)
 
                             MagicButton(icon: "star", size: .custom(60))
-                                .magicShape(.roundedSquare)
                         }
 
                         // 80 尺寸
                         HStack(spacing: 16) {
                             MagicButton(icon: "star", size: .custom(80))
                                 .magicTitle("80")
-                                .magicShape(.roundedRectangle)
 
                             MagicButton(icon: "star", size: .custom(80))
-                                .magicShape(.circle)
 
                             MagicButton(icon: "star", size: .custom(80))
                                 .magicTitle("80")
-                                .magicShape(.capsule)
 
                             MagicButton(icon: "star", size: .custom(80))
-                                .magicShape(.roundedSquare)
                         }
                     }
                 }
@@ -265,18 +229,15 @@ import SwiftUI
                         HStack(spacing: 16) {
                             Frame(width: 32, height: 32) {
                                 MagicButton(icon: "star", size: .auto)
-                                    .magicShape(.circle)
                             }
 
                             Frame(width: 60, height: 32) {
                                 MagicButton(icon: "star", size: .auto)
                                     .magicTitle("Mini")
-                                    .magicShape(.capsule)
                             }
 
                             Frame(width: 40, height: 40) {
                                 MagicButton(icon: "star", size: .auto)
-                                    .magicShape(.roundedSquare)
                             }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -286,18 +247,15 @@ import SwiftUI
                             Frame(width: 120, height: 40) {
                                 MagicButton(icon: "star", size: .auto)
                                     .magicTitle("Regular")
-                                    .magicShape(.roundedRectangle)
                             }
 
                             Frame(width: 60, height: 60) {
                                 MagicButton(icon: "star", size: .auto)
-                                    .magicShape(.circle)
                             }
 
                             Frame(width: 100, height: 50) {
                                 MagicButton(icon: "star", size: .auto)
                                     .magicTitle("Medium")
-                                    .magicShape(.capsule)
                             }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -306,54 +264,45 @@ import SwiftUI
                         Frame(width: 160, height: 80) {
                             MagicButton(icon: "star", size: .auto)
                                 .magicTitle("Large")
-                                .magicShape(.roundedRectangle)
                         }
 
                         Frame(width: 100, height: 100) {
                             MagicButton(icon: "star", size: .auto)
-                                .magicShape(.circle)
                         }
 
                         Frame(width: 140, height: 70) {
                             MagicButton(icon: "star", size: .auto)
                                 .magicTitle("Big")
-                                .magicShape(.capsule)
                         }
 
                         // 超大尺寸
                         Frame(width: 180, height: 120) {
                             MagicButton(icon: "star", size: .auto)
                                 .magicTitle("Extra Large")
-                                .magicShape(.roundedRectangle)
                         }
 
                         Frame(width: 150, height: 150) {
                             MagicButton(icon: "star", size: .auto)
-                                .magicShape(.circle)
                         }
 
                         Frame(width: 180, height: 90) {
                             MagicButton(icon: "star", size: .auto)
                                 .magicTitle("Huge")
-                                .magicShape(.capsule)
                         }
 
                         // 巨大尺寸
                         Frame(width: 300, height: 200) {
                             MagicButton(icon: "star", size: .auto)
                                 .magicTitle("Giant")
-                                .magicShape(.roundedRectangle)
                         }
 
                         Frame(width: 250, height: 250) {
                             MagicButton(icon: "star", size: .auto)
-                                .magicShape(.circle)
                         }
 
                         Frame(width: 280, height: 140) {
                             MagicButton(icon: "star", size: .auto)
                                 .magicTitle("Massive")
-                                .magicShape(.capsule)
                         }
                     }
                 }

@@ -187,60 +187,6 @@ public struct MagicButton: View {
         }
     }
 
-    /// 按钮形状
-    public enum Shape {
-        /// 圆形，当没有标题时自动采用正圆形状
-        case circle
-        /// 胶囊形（两端圆角），适用于带文本的按钮
-        case capsule
-        /// 矩形（无圆角），适用于网格布局
-        case rectangle
-        /// 圆角矩形（固定圆角），通用选项
-        case roundedRectangle
-        /// 圆角正方形，适用于图标按钮
-        case roundedSquare
-        /// 自定义圆角矩形，可以为每个角设置不同的圆角半径
-        /// - Parameters:
-        ///   - topLeft: 左上角圆角半径
-        ///   - topRight: 右上角圆角半径
-        ///   - bottomLeft: 左下角圆角半径
-        ///   - bottomRight: 右下角圆角半径
-        case customRoundedRectangle(topLeft: CGFloat, topRight: CGFloat, bottomLeft: CGFloat, bottomRight: CGFloat)
-        /// 自定义胶囊形，可以为左右两端设置不同的圆角半径
-        /// - Parameters:
-        ///   - leftRadius: 左侧圆角半径
-        ///   - rightRadius: 右侧圆角半径
-        case customCapsule(leftRadius: CGFloat, rightRadius: CGFloat)
-
-        /// 获取形状的圆角半径
-        public var cornerRadius: CGFloat {
-            switch self {
-            case .circle:
-                return .infinity
-            case .capsule:
-                return .infinity
-            case .rectangle:
-                return 0
-            case .roundedRectangle:
-                return 8
-            case .roundedSquare:
-                return 12
-            case .customRoundedRectangle:
-                return 0 // 由自定义值决定
-            case .customCapsule:
-                return 0 // 由自定义值决定
-            }
-        }
-    }
-
-    /// 按钮形状的显示时机
-    public enum ShapeVisibility {
-        /// 始终显示形状
-        case always
-        /// 仅在悬停时显示形状
-        case onHover
-    }
-
     /// 加载动画样式
     public typealias LoadingStyle = MagicLoadingView.Style
 
@@ -260,10 +206,6 @@ public struct MagicButton: View {
     let style: Style
     /// 按钮大小
     let size: Size
-    /// 按钮形状
-    let shape: Shape
-    /// 形状显示时机
-    let shapeVisibility: ShapeVisibility
     /// 禁用状态的提示文本
     let disabledReason: String?
     /// 弹出内容
@@ -296,22 +238,15 @@ public struct MagicButton: View {
             } else {
                 containerContent
                     .frame(
-                        width: isCircularShape ? size.fixedSize : size.fixedSize,
+                        width: size.fixedSize,
                         height: size.fixedSize
                     )
             }
         }
 
         return container
-            .background(shouldShowShape ? Rectangle()
-                .fill(Color.clear)
-                .magicShape(
-                    shape,
-                    style: style,
-                    backgroundColor: backgroundColor,
-                    shadowColor: shadowColor,
-                    buttonSize: buttonSize
-                ) : nil)
+            .background(backgroundColor)
+            .magicButtonRounded()
             .onHover { hovering in
                 withAnimation(.easeInOut(duration: 0.2)) {
                     isHovering = hovering
@@ -358,28 +293,12 @@ public struct MagicButton: View {
             .id(currentViewId)
     }
 
-    private var isCircularShape: Bool {
-        if case .circle = shape {
-            return title == nil
-        }
-        return false
-    }
-
     private var buttonSize: CGFloat {
         if case .auto = size {
             let availableSize = containerSize - (size.horizontalPadding * 2)
             return min(max(availableSize, Size.small.fixedSize), Size.huge.fixedSize)
         }
         return size.fixedSize
-    }
-
-    private var shouldShowShape: Bool {
-        switch shapeVisibility {
-        case .always:
-            return true
-        case .onHover:
-            return isHovering
-        }
     }
 }
 
@@ -413,12 +332,6 @@ extension MagicButton {
     #Preview("Basic") {
         BasicButtonsPreview()
             .frame(height: 700)
-            .frame(width: 500)
-    }
-
-    #Preview("Shape") {
-        ShapeButtonsPreview()
-            .frame(height: 600)
             .frame(width: 500)
     }
 #endif

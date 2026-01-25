@@ -11,8 +11,6 @@ extension MagicButton {
         title: String? = nil,
         style: Style = .primary,
         size: Size = .regular,
-        shape: Shape = .roundedRectangle,
-        shapeVisibility: ShapeVisibility = .always,
         disabledReason: String? = nil,
         popoverContent: AnyView? = nil,
         customBackgroundColor: Color? = nil,
@@ -32,8 +30,6 @@ extension MagicButton {
         }
         self.style = style
         self.size = size
-        self.shape = shape
-        self.shapeVisibility = shapeVisibility
         self.disabledReason = disabledReason
         self.popoverContent = popoverContent
         self.action = action
@@ -49,8 +45,6 @@ extension MagicButton {
         title: String? = nil,
         style: Style = .primary,
         size: Size = .regular,
-        shape: Shape = .roundedRectangle,
-        shapeVisibility: ShapeVisibility = .always,
         disabledReason: String? = nil,
         popoverContent: AnyView? = nil,
         customBackgroundColor: Color? = nil,
@@ -69,8 +63,6 @@ extension MagicButton {
         }
         self.style = style
         self.size = size
-        self.shape = shape
-        self.shapeVisibility = shapeVisibility
         self.disabledReason = disabledReason
         self.popoverContent = popoverContent
         self.action = action
@@ -86,8 +78,6 @@ extension MagicButton {
         title: String? = nil,
         style: Style = .primary,
         size: Size = .regular,
-        shape: Shape = .roundedRectangle,
-        shapeVisibility: ShapeVisibility = .always,
         disabledReason: String? = nil,
         popoverContent: AnyView? = nil,
         customBackgroundColor: Color? = nil,
@@ -101,8 +91,6 @@ extension MagicButton {
             title: title,
             style: style,
             size: size,
-            shape: shape,
-            shapeVisibility: shapeVisibility,
             disabledReason: disabledReason,
             popoverContent: popoverContent,
             customBackgroundColor: customBackgroundColor,
@@ -123,8 +111,6 @@ extension MagicButton {
         title: String? = nil,
         style: Style = .primary,
         size: Size = .regular,
-        shape: Shape = .roundedRectangle,
-        shapeVisibility: ShapeVisibility = .always,
         disabledReason: String? = nil,
         popoverContent: AnyView? = nil,
         customBackgroundColor: Color? = nil,
@@ -138,8 +124,6 @@ extension MagicButton {
             title: title,
             style: style,
             size: size,
-            shape: shape,
-            shapeVisibility: shapeVisibility,
             disabledReason: disabledReason,
             popoverContent: popoverContent,
             customBackgroundColor: customBackgroundColor,
@@ -158,8 +142,6 @@ extension MagicButton {
         title: String? = nil,
         style: Style = .primary,
         size: Size = .regular,
-        shape: Shape = .roundedRectangle,
-        shapeVisibility: ShapeVisibility = .always,
         disabledReason: String? = nil,
         popoverContent: AnyView? = nil,
         customBackgroundColor: Color? = nil,
@@ -173,8 +155,6 @@ extension MagicButton {
             title: title,
             style: style,
             size: size,
-            shape: shape,
-            shapeVisibility: shapeVisibility,
             disabledReason: disabledReason,
             popoverContent: popoverContent,
             customBackgroundColor: customBackgroundColor,
@@ -193,8 +173,6 @@ extension MagicButton {
         title: String? = nil,
         style: Style = .primary,
         size: Size = .regular,
-        shape: Shape = .roundedRectangle,
-        shapeVisibility: ShapeVisibility = .always,
         disabledReason: String? = nil,
         popoverContent: AnyView? = nil,
         customBackgroundColor: Color? = nil,
@@ -208,8 +186,6 @@ extension MagicButton {
             title: title,
             style: style,
             size: size,
-            shape: shape,
-            shapeVisibility: shapeVisibility,
             disabledReason: disabledReason,
             popoverContent: popoverContent,
             customBackgroundColor: customBackgroundColor,
@@ -228,8 +204,6 @@ extension MagicButton {
         title: String? = nil,
         style: Style = .primary,
         size: Size = .regular,
-        shape: Shape = .roundedRectangle,
-        shapeVisibility: ShapeVisibility = .always,
         disabledReason: String? = nil,
         popoverContent: AnyView? = nil,
         customBackgroundColor: Color? = nil,
@@ -243,8 +217,6 @@ extension MagicButton {
             title: title,
             style: style,
             size: size,
-            shape: shape,
-            shapeVisibility: shapeVisibility,
             disabledReason: disabledReason,
             popoverContent: popoverContent,
             customBackgroundColor: customBackgroundColor,

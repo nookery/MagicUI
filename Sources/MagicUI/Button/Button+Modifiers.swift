@@ -7,13 +7,11 @@ public extension MagicButton {
     /// - Parameter name: SF Symbols 图标名称
     /// - Returns: 更新后的按钮
     func magicIcon(_ name: String) -> MagicButton {
-        MagicButton(
+        var button = MagicButton(
             icon: name,
             title: self.title,
             style: self.style,
             size: self.size,
-            shape: self.shape,
-            shapeVisibility: self.shapeVisibility,
             disabledReason: self.disabledReason,
             popoverContent: self.popoverContent,
             customBackgroundColor: self.customBackgroundColor,
@@ -21,19 +19,19 @@ public extension MagicButton {
             loadingStyle: self.loadingStyle,
             action: self.action
         )
+        button.buttonId = self.buttonId
+        return button
     }
 
     /// 设置按钮标题
     /// - Parameter text: 标题文本，传入 nil 可以移除标题
     /// - Returns: 更新后的按钮
     func magicTitle(_ text: String?) -> MagicButton {
-        MagicButton(
+        var button = MagicButton(
             icon: self.icon,
             title: text,
             style: self.style,
             size: self.size,
-            shape: self.shape,
-            shapeVisibility: self.shapeVisibility,
             disabledReason: self.disabledReason,
             popoverContent: self.popoverContent,
             customBackgroundColor: self.customBackgroundColor,
@@ -41,19 +39,19 @@ public extension MagicButton {
             loadingStyle: self.loadingStyle,
             action: self.action
         )
+        button.buttonId = self.buttonId
+        return button
     }
 
     /// 设置按钮样式
     /// - Parameter style: 按钮样式（.primary 或 .secondary）
     /// - Returns: 更新后的按钮
     func magicStyle(_ style: Style) -> MagicButton {
-        MagicButton(
+        var button = MagicButton(
             icon: self.icon,
             title: self.title,
             style: style,
             size: self.size,
-            shape: self.shape,
-            shapeVisibility: self.shapeVisibility,
             disabledReason: self.disabledReason,
             popoverContent: self.popoverContent,
             customBackgroundColor: self.customBackgroundColor,
@@ -61,6 +59,8 @@ public extension MagicButton {
             loadingStyle: self.loadingStyle,
             action: self.action
         )
+        button.buttonId = self.buttonId
+        return button
     }
 
     /// 设置按钮大小
@@ -76,13 +76,11 @@ public extension MagicButton {
     /// button.magicSize(.auto)
     /// ```
     func magicSize(_ size: Size) -> MagicButton {
-        MagicButton(
+        var button = MagicButton(
             icon: self.icon,
             title: self.title,
             style: self.style,
             size: size,
-            shape: self.shape,
-            shapeVisibility: self.shapeVisibility,
             disabledReason: self.disabledReason,
             popoverContent: self.popoverContent,
             customBackgroundColor: self.customBackgroundColor,
@@ -90,59 +88,19 @@ public extension MagicButton {
             loadingStyle: self.loadingStyle,
             action: self.action
         )
-    }
-
-    /// 设置按钮形状
-    /// - Parameter shape: 按钮形状，支持多种预设和自定义形状
-    /// - Returns: 更新后的按钮
-    ///
-    /// 示例：
-    /// ```swift
-    /// // 使用预设形状
-    /// button.magicShape(.roundedRectangle)
-    ///
-    /// // 使用自定义圆角矩形
-    /// button.magicShape(.customRoundedRectangle(
-    ///     topLeft: 8,
-    ///     topRight: 16,
-    ///     bottomLeft: 16,
-    ///     bottomRight: 8
-    /// ))
-    ///
-    /// // 使用自定义胶囊形
-    /// button.magicShape(.customCapsule(
-    ///     leftRadius: 12,
-    ///     rightRadius: 24
-    /// ))
-    /// ```
-    func magicShape(_ shape: Shape) -> MagicButton {
-        MagicButton(
-            icon: self.icon,
-            title: self.title,
-            style: self.style,
-            size: self.size,
-            shape: shape,
-            shapeVisibility: self.shapeVisibility,
-            disabledReason: self.disabledReason,
-            popoverContent: self.popoverContent,
-            customBackgroundColor: self.customBackgroundColor,
-            preventDoubleClick: self.preventDoubleClick,
-            loadingStyle: self.loadingStyle,
-            action: self.action
-        )
+        button.buttonId = self.buttonId
+        return button
     }
 
     /// 设置按钮禁用状态
     /// - Parameter reason: 禁用原因，显示在提示中。传入 nil 可以启用按钮
     /// - Returns: 更新后的按钮
     func magicDisabled(_ reason: String?) -> MagicButton {
-        MagicButton(
+        var button = MagicButton(
             icon: self.icon,
             title: self.title,
             style: self.style,
             size: self.size,
-            shape: self.shape,
-            shapeVisibility: self.shapeVisibility,
             disabledReason: reason,
             popoverContent: self.popoverContent,
             customBackgroundColor: self.customBackgroundColor,
@@ -150,6 +108,8 @@ public extension MagicButton {
             loadingStyle: self.loadingStyle,
             action: self.action
         )
+        button.buttonId = self.buttonId
+        return button
     }
 
     /// 设置按钮的弹出内容
@@ -167,13 +127,11 @@ public extension MagicButton {
     /// }
     /// ```
     func magicPopover<Content: View>(@ViewBuilder content: @escaping () -> Content) -> MagicButton {
-        MagicButton(
+        var button = MagicButton(
             icon: self.icon,
             title: self.title,
             style: self.style,
             size: self.size,
-            shape: self.shape,
-            shapeVisibility: self.shapeVisibility,
             disabledReason: self.disabledReason,
             popoverContent: AnyView(content()),
             customBackgroundColor: self.customBackgroundColor,
@@ -181,35 +139,8 @@ public extension MagicButton {
             loadingStyle: self.loadingStyle,
             action: self.action
         )
-    }
-
-    /// 设置按钮形状的显示时机
-    /// - Parameter visibility: 形状显示时机（.always 或 .onHover）
-    /// - Returns: 更新后的按钮
-    ///
-    /// 示例：
-    /// ```swift
-    /// // 始终显示形状（默认行为）
-    /// button.magicShapeVisibility(.always)
-    ///
-    /// // 仅在悬停时显示形状
-    /// button.magicShapeVisibility(.onHover)
-    /// ```
-    func magicShapeVisibility(_ visibility: ShapeVisibility) -> MagicButton {
-        MagicButton(
-            icon: self.icon,
-            title: self.title,
-            style: self.style,
-            size: self.size,
-            shape: self.shape,
-            shapeVisibility: visibility,
-            disabledReason: self.disabledReason,
-            popoverContent: self.popoverContent,
-            customBackgroundColor: self.customBackgroundColor,
-            preventDoubleClick: self.preventDoubleClick,
-            loadingStyle: self.loadingStyle,
-            action: self.action
-        )
+        button.buttonId = self.buttonId
+        return button
     }
 
     /// 设置按钮的背景色
@@ -225,13 +156,11 @@ public extension MagicButton {
     /// button.magicBackgroundColor(Color(hex: "#FF5733"))
     /// ```
     func magicBackgroundColor(_ color: Color) -> MagicButton {
-        MagicButton(
+        var button = MagicButton(
             icon: self.icon,
             title: self.title,
             style: .custom(color),
             size: self.size,
-            shape: self.shape,
-            shapeVisibility: self.shapeVisibility,
             disabledReason: self.disabledReason,
             popoverContent: self.popoverContent,
             customBackgroundColor: self.customBackgroundColor,
@@ -239,6 +168,8 @@ public extension MagicButton {
             loadingStyle: self.loadingStyle,
             action: self.action
         )
+        button.buttonId = self.buttonId
+        return button
     }
 
     /// 设置按钮的背景视图
@@ -260,13 +191,11 @@ public extension MagicButton {
     /// button.magicBackground(MagicBackground.dawnSky)
     /// ```
     func magicBackground<V: View>(_ background: V) -> MagicButton {
-        MagicButton(
+        var button = MagicButton(
             icon: self.icon,
             title: self.title,
             style: .customView(AnyView(background)),
             size: self.size,
-            shape: self.shape,
-            shapeVisibility: self.shapeVisibility,
             disabledReason: self.disabledReason,
             popoverContent: self.popoverContent,
             customBackgroundColor: self.customBackgroundColor,
@@ -274,6 +203,8 @@ public extension MagicButton {
             loadingStyle: self.loadingStyle,
             action: self.action
         )
+        button.buttonId = self.buttonId
+        return button
     }
 
     /// 显示虚线边框，用于调试布局

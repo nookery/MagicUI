@@ -171,8 +171,7 @@ import SwiftUI
                 Spacer()
             }
             .padding()
-            .frame(maxHeight: .infinity)
-            .frame(maxWidth: .infinity)
+            .infinite()
             .inScrollView()
         }
     }

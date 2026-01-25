@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// MagicRounded组件的预览和示例
-struct MagicRoundedPreviews: View {
+struct RoundedPreviews: View {
     var body: some View {
         VStack(spacing: 30) {
             // Title
@@ -185,11 +185,66 @@ struct MagicRoundedPreviews: View {
             .padding()
             .background(Color.gray.opacity(0.1))
             .magicRoundedMedium()
+
+            // MagicButton with Rounded
+            VStack(spacing: 15) {
+                Text("MagicButton with Rounded Extensions")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+
+                VStack(spacing: 12) {
+                    // 默认圆角（6pt）
+                    MagicButton(icon: "star.fill", title: "Default (6pt)")
+                        .magicStyle(.primary)
+
+                    // 小圆角
+                    MagicButton(icon: "heart.fill", title: "Small (4pt)")
+                        .magicStyle(.secondary)
+                        .magicRoundedSmall()
+
+                    // 中等圆角
+                    MagicButton(icon: "leaf.fill", title: "Medium (8pt)")
+                        .magicStyle(.success)
+                        .magicRoundedMedium()
+
+                    // 大圆角
+                    MagicButton(icon: "flame.fill", title: "Large (16pt)")
+                        .magicStyle(.warning)
+                        .magicRoundedLarge()
+
+                    // 超大圆角
+                    MagicButton(icon: "bolt.fill", title: "XLarge (24pt)")
+                        .magicStyle(.danger)
+                        .magicRoundedExtraLarge()
+
+                    // 胶囊形
+                    HStack(spacing: 12) {
+                        MagicButton(icon: "play.fill", title: "Capsule")
+                            .magicStyle(.primary)
+                            .magicCapsule()
+
+                        MagicButton(icon: "stop.fill", title: "Circle")
+                            .magicStyle(.danger)
+                            .magicCircle()
+                    }
+
+                    // 自定义圆角
+                    MagicButton(icon: "sparkles", title: "Custom Rounded")
+                        .magicStyle(.info)
+                        .magicRoundedCustom(
+                            topLeading: 20,
+                            topTrailing: 8,
+                            bottomLeading: 8,
+                            bottomTrailing: 20
+                        )
+                }
+            }
+            .padding()
+            .background(Color.gray.opacity(0.1))
+            .magicRoundedMedium()
         }
         .padding()
         .inScrollView()
-        .frame(minWidth: 600, minHeight: 700)
-        .frame(idealHeight: 800)
     }
 
     // MARK: - Helper Methods
@@ -208,5 +263,7 @@ struct MagicRoundedPreviews: View {
 // MARK: - Preview
 
 #Preview {
-    MagicRoundedPreviews()
+    RoundedPreviews()
+        .frame(height: 700)
+        .frame(width: 500)
 }
