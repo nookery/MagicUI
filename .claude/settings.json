@@ -5,7 +5,8 @@
       "Bash(grep:*)",
       "Bash(for file in *.swift)",
       "Bash(do awk:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(find:*)"
     ]
   }
 }
