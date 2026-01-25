@@ -31,11 +31,11 @@ public extension View {
     ///
     /// ```swift
     /// Text("Small Rounded")
-    ///     .magicRoundedSmall()
+    ///     .roundedSmall()
     /// ```
     ///
     /// - Returns: 带有小圆角效果的视图
-    func magicRoundedSmall() -> some View {
+    func roundedSmall() -> some View {
         magicRounded(radius: 4)
     }
 
@@ -45,11 +45,11 @@ public extension View {
     ///
     /// ```swift
     /// Text("Medium Rounded")
-    ///     .magicRoundedMedium()
+    ///     .roundedMedium()
     /// ```
     ///
     /// - Returns: 带有中等圆角效果的视图
-    func magicRoundedMedium() -> some View {
+    func roundedMedium() -> some View {
         magicRounded(radius: 8)
     }
 
@@ -59,11 +59,11 @@ public extension View {
     ///
     /// ```swift
     /// Text("Large Rounded")
-    ///     .magicRoundedLarge()
+    ///     .roundedLarge()
     /// ```
     ///
     /// - Returns: 带有大圆角效果的视图
-    func magicRoundedLarge() -> some View {
+    func roundedLarge() -> some View {
         magicRounded(radius: 16)
     }
 
@@ -73,11 +73,11 @@ public extension View {
     ///
     /// ```swift
     /// Text("Extra Large Rounded")
-    ///     .magicRoundedExtraLarge()
+    ///     .roundedExtraLarge()
     /// ```
     ///
     /// - Returns: 带有超大圆角效果的视图
-    func magicRoundedExtraLarge() -> some View {
+    func roundedExtraLarge() -> some View {
         magicRounded(radius: 24)
     }
 
@@ -87,25 +87,25 @@ public extension View {
     ///
     /// ```swift
     /// Text("Capsule")
-    ///     .magicCapsule()
+    ///     .capsule()
     /// ```
     ///
     /// - Returns: 带有胶囊形状效果的视图
-    func magicCapsule() -> some View {
+    func capsule() -> some View {
         self.clipShape(Capsule())
     }
 
-    /// 为视图添加圆形效果
+    /// 为视图添加完全圆角效果
     ///
-    /// 使用圆形形状
+    /// 使用完全圆角形状
     ///
     /// ```swift
     /// Image(systemName: "star.fill")
-    ///     .magicCircle()
+    ///     .roundedFull()
     /// ```
     ///
-    /// - Returns: 带有圆形效果的视图
-    func magicCircle() -> some View {
+    /// - Returns: 带有完全圆角效果的视图
+    func roundedFull() -> some View {
         self.clipShape(Circle())
     }
 
@@ -115,7 +115,7 @@ public extension View {
     ///
     /// ```swift
     /// Text("Custom Rounded")
-    ///     .magicRoundedCustom(
+    ///     .roundedCustom(
     ///         topLeading: 12,
     ///         topTrailing: 12,
     ///         bottomLeading: 4,
@@ -129,7 +129,7 @@ public extension View {
     ///   - bottomLeading: 左下角圆角半径
     ///   - bottomTrailing: 右下角圆角半径
     /// - Returns: 带有自定义圆角效果的视图
-    func magicRoundedCustom(
+    func roundedCustom(
         topLeading: CGFloat = 0,
         topTrailing: CGFloat = 0,
         bottomLeading: CGFloat = 0,
@@ -151,11 +151,11 @@ public extension View {
     ///
     /// ```swift
     /// VStack { ... }
-    ///     .magicCardRounded()
+    ///     .cardRounded()
     /// ```
     ///
     /// - Returns: 带有卡片样式圆角效果的视图
-    func magicCardRounded() -> some View {
+    func cardRounded() -> some View {
         magicRounded(radius: 12, style: .continuous)
     }
 
@@ -165,19 +165,20 @@ public extension View {
     ///
     /// ```swift
     /// Button("Click Me") { }
-    ///     .magicButtonRounded()
+    ///     .buttonRounded()
     /// ```
     ///
     /// - Returns: 带有按钮样式圆角效果的视图
-    func magicButtonRounded() -> some View {
+    func buttonRounded() -> some View {
         magicRounded(radius: 6, style: .continuous)
     }
 }
 
 // MARK: - Preview
 
-#Preview {
-    RoundedPreviews()
-        .frame(height: 600)
-        .frame(width: 500)
-}
+#if DEBUG
+    #Preview("Rounded Sizes") {
+        RoundedSizesPreview()
+            .frame(height: 600)
+    }
+#endif

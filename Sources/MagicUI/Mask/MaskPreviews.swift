@@ -70,7 +70,7 @@ struct MaskPreviews: View {
                 }
                 .padding()
                 .background(Color.gray.opacity(0.1))
-                .magicRoundedMedium()
+                .roundedMedium()
 
                 // Modifier Masks
                 VStack(spacing: 15) {
@@ -88,7 +88,7 @@ struct MaskPreviews: View {
                 }
                 .padding()
                 .background(Color.gray.opacity(0.1))
-                .magicRoundedMedium()
+                .roundedMedium()
             }
             .padding()
             .inScrollView()

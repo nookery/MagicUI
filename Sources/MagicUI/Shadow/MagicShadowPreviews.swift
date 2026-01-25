@@ -17,7 +17,7 @@ struct MagicShadowPreviews: View {
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.blue)
-                            .magicRoundedMedium()
+                            .roundedMedium()
                             .shadowXs()
 
                         Text("SM")
@@ -25,7 +25,7 @@ struct MagicShadowPreviews: View {
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.green)
-                            .magicRoundedMedium()
+                            .roundedMedium()
                             .shadowSm()
                     }
 
@@ -35,7 +35,7 @@ struct MagicShadowPreviews: View {
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.orange)
-                            .magicRoundedMedium()
+                            .roundedMedium()
                             .shadowMd()
 
                         Text("LG")
@@ -43,7 +43,7 @@ struct MagicShadowPreviews: View {
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.purple)
-                            .magicRoundedMedium()
+                            .roundedMedium()
                             .shadowLg()
                     }
                 }
@@ -55,7 +55,7 @@ struct MagicShadowPreviews: View {
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.red)
-                            .magicRoundedMedium()
+                            .roundedMedium()
                             .shadowXl()
 
                         Text("2XL")
@@ -63,7 +63,7 @@ struct MagicShadowPreviews: View {
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.teal)
-                            .magicRoundedMedium()
+                            .roundedMedium()
                             .shadow2xl()
 
                         Text("3XL")
@@ -71,7 +71,7 @@ struct MagicShadowPreviews: View {
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.indigo)
-                            .magicRoundedMedium()
+                            .roundedMedium()
                             .shadow3xl()
 
                         Text("None")
@@ -79,14 +79,14 @@ struct MagicShadowPreviews: View {
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.gray)
-                            .magicRoundedMedium()
+                            .roundedMedium()
                             .shadowNone()
                     }
                 }
             }
             .padding()
             .background(Color.gray.opacity(0.1))
-            .magicRoundedMedium()
+            .roundedMedium()
 
             // Colored Shadows
             VStack(spacing: 15) {
@@ -102,7 +102,7 @@ struct MagicShadowPreviews: View {
             }
             .padding()
             .background(Color.gray.opacity(0.1))
-            .magicRoundedMedium()
+            .roundedMedium()
 
             // Inner Shadow
             VStack(spacing: 15) {
@@ -117,7 +117,7 @@ struct MagicShadowPreviews: View {
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.white)
-                        .magicRoundedMedium()
+                        .roundedMedium()
                         .shadowInner()
 
                     Text("With Color")
@@ -126,7 +126,7 @@ struct MagicShadowPreviews: View {
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.yellow)
-                        .magicRoundedMedium()
+                        .roundedMedium()
                         .shadowInner()
 
                     Text("Rounded")
@@ -135,13 +135,13 @@ struct MagicShadowPreviews: View {
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.indigo)
-                        .magicRoundedLarge()
+                        .roundedLarge()
                         .shadowInner()
                 }
             }
             .padding()
             .background(Color.gray.opacity(0.1))
-            .magicRoundedMedium()
+            .roundedMedium()
 
             // Card Style
             VStack(spacing: 15) {
@@ -160,7 +160,7 @@ struct MagicShadowPreviews: View {
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(Color.cyan)
-                    .magicCardRounded()
+                    .cardRounded()
                     .shadowCard()
 
                     Button("Button") {}
@@ -169,13 +169,13 @@ struct MagicShadowPreviews: View {
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.pink)
-                        .magicButtonRounded()
+                        .buttonRounded()
                         .shadowButton()
                 }
             }
             .padding()
             .background(Color.gray.opacity(0.1))
-            .magicRoundedMedium()
+            .roundedMedium()
         }
         .padding()
         .inScrollView()
@@ -191,7 +191,7 @@ struct MagicShadowPreviews: View {
             .padding()
             .frame(maxWidth: .infinity)
             .background(color)
-            .magicRoundedMedium()
+            .roundedMedium()
             .shadowColor(shadowColor, radius: 8)
     }
 }

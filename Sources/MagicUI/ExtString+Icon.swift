@@ -6,17 +6,16 @@ public extension String {
     /// ```swift
     /// let button = "star".previewIconButton()
     /// ```
-    /// - Returns: 一个 MagicButton，点击后会显示所有图标的预览
-    func previewIconButton() -> MagicButton {
-        MagicButton(
-            icon: self,
-            style: .secondary,
-            size: .regular,
-            popoverContent: AnyView(
-                ImageExtensionDemoView()
-                    .frame(width: 500)
-            )
-        )
+    /// - Returns: 一个 Button，点击后会显示所有图标的预览
+    func previewIconButton() -> some View {
+        Button(action: {}) {
+            Image(systemName: self)
+        }
+        .buttonStyle(.secondary)
+        .popover(isPresented: .constant(false)) {
+            ImageExtensionDemoView()
+                .frame(width: 500)
+        }
     }
 
     // MARK: - Icons (A-Z)

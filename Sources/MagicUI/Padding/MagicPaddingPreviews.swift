@@ -33,7 +33,7 @@ struct MagicPaddingPreviews: View {
                 }
                 .padding()
                 .background(Color.gray.opacity(0.1))
-                .magicRoundedMedium()
+                .roundedMedium()
 
                 // Horizontal (px-)
                 VStack(spacing: 15) {
@@ -50,7 +50,7 @@ struct MagicPaddingPreviews: View {
                 }
                 .padding()
                 .background(Color.gray.opacity(0.1))
-                .magicRoundedMedium()
+                .roundedMedium()
 
                 // Vertical (py-)
                 VStack(spacing: 15) {
@@ -67,7 +67,7 @@ struct MagicPaddingPreviews: View {
                 }
                 .padding()
                 .background(Color.gray.opacity(0.1))
-                .magicRoundedMedium()
+                .roundedMedium()
 
                 // Individual Sides
                 VStack(spacing: 15) {
@@ -95,7 +95,7 @@ struct MagicPaddingPreviews: View {
                 }
                 .padding()
                 .background(Color.gray.opacity(0.1))
-                .magicRoundedMedium()
+                .roundedMedium()
 
                 // Combinations
                 VStack(spacing: 15) {
@@ -111,7 +111,7 @@ struct MagicPaddingPreviews: View {
                 }
                 .padding()
                 .background(Color.gray.opacity(0.1))
-                .magicRoundedMedium()
+                .roundedMedium()
 
                 // Real World Examples
                 VStack(spacing: 15) {
@@ -126,7 +126,7 @@ struct MagicPaddingPreviews: View {
                             .foregroundColor(.white)
                             .py2px4()
                             .background(Color.blue)
-                            .magicRoundedMedium()
+                            .roundedMedium()
                             .shadowSm()
 
                         // Badge
@@ -137,7 +137,7 @@ struct MagicPaddingPreviews: View {
                             .p1()
                             .px2()
                             .background(Color.red)
-                            .magicCapsule()
+                            .capsule()
 
                         // Card
                         VStack(alignment: .leading, spacing: 8) {
@@ -150,13 +150,13 @@ struct MagicPaddingPreviews: View {
                         .p4()
                         .frame(maxWidth: .infinity)
                         .background(Color.purple)
-                        .magicRoundedMedium()
+                        .roundedMedium()
                         .shadowMd()
                     }
                 }
                 .padding()
                 .background(Color.gray.opacity(0.1))
-                .magicRoundedMedium()
+                .roundedMedium()
             }
             .padding()
         }
