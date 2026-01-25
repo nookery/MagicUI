@@ -11,7 +11,6 @@ public extension String {
         Button(action: {}) {
             Image(systemName: self)
         }
-        .buttonStyle(.secondary)
         .popover(isPresented: .constant(false)) {
             ImageExtensionDemoView()
                 .frame(width: 500)

@@ -17,19 +17,19 @@ import SwiftUI
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundFrost()
+                            .inBackgroundFrost()
 
                         Text("Gradient")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundGradient()
+                            .inBackgroundGradient()
 
                         Text("Aurora")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundAurora()
+                            .inBackgroundAurora()
                     }
                 }
 
@@ -45,25 +45,25 @@ import SwiftUI
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundOcean()
+                            .inBackgroundOcean()
 
                         Text("Forest")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundForest()
+                            .inBackgroundForest()
 
                         Text("Sunset")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundSunset()
+                            .inBackgroundSunset()
 
                         Text("Mountain")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundSnowPeak()
+                            .inBackgroundSnowPeak()
                     }
                 }
 
@@ -79,25 +79,25 @@ import SwiftUI
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundLavender()
+                            .inBackgroundLavender()
 
                         Text("Rose")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundRose()
+                            .inBackgroundRose()
 
                         Text("Mint")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundMint()
+                            .inBackgroundMint()
 
                         Text("Coral")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundCoral()
+                            .inBackgroundCoral()
                     }
                 }
 
@@ -113,19 +113,19 @@ import SwiftUI
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundCosmicDust()
+                            .inBackgroundCosmicDust()
 
                         Text("Galaxy Spiral")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundGalaxySpiral()
+                            .inBackgroundGalaxySpiral()
 
                         Text("Nebula")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundNebulaMist()
+                            .inBackgroundNebulaMist()
                     }
                 }
 
@@ -141,25 +141,25 @@ import SwiftUI
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundWatermelon()
+                            .inBackgroundWatermelon()
 
                         Text("Strawberry")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundStrawberry()
+                            .inBackgroundStrawberry()
 
                         Text("Orange")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundOrange()
+                            .inBackgroundOrange()
 
                         Text("Blueberry")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundBlueberry()
+                            .inBackgroundBlueberry()
                     }
                 }
 
@@ -175,19 +175,19 @@ import SwiftUI
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundSunnyBeach()
+                            .inBackgroundSunnyBeach()
 
                         Text("Tropical Sunset")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundTropicalSunset()
+                            .inBackgroundTropicalSunset()
 
                         Text("Palm Beach")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundPalmBeach()
+                            .inBackgroundPalmBeach()
                     }
                 }
 
@@ -203,19 +203,19 @@ import SwiftUI
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundCandyLand()
+                            .inBackgroundCandyLand()
 
                         Text("Balloon Party")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundBalloonParty()
+                            .inBackgroundBalloonParty()
 
                         Text("Toy Blocks")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundToyBlocks()
+                            .inBackgroundToyBlocks()
                     }
                 }
 
@@ -231,19 +231,19 @@ import SwiftUI
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundJazzNight()
+                            .inBackgroundJazzNight()
 
                         Text("Classical Harmony")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundClassicalHarmony()
+                            .inBackgroundClassicalHarmony()
 
                         Text("Rock Stage")
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .inMagicBackgroundRockStage()
+                            .inBackgroundRockStage()
                     }
                 }
             }

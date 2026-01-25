@@ -472,4 +472,6 @@ public extension View {
 
 #Preview {
     MagicPaddingPreviews()
+        .frame(height: 600)
+        .frame(width: 500)
 }
