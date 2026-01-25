@@ -76,85 +76,85 @@ public extension View {
 // MARK: - Preview
 
 #if DEBUG
-#Preview("Card Extensions - Materials") {
-    VStack(spacing: 16) {
-        Text("材质卡片")
-            .font(.headline)
+    #Preview("Card Extensions - Materials") {
+        VStack(spacing: 16) {
+            Text("材质卡片")
+                .font(.headline)
 
-        Text("基础卡片")
-            .inCardUltraThin()
+            Text("基础卡片")
+                .inCardUltraThin()
 
-        Text("薄材质")
-            .inCardThin()
+            Text("薄材质")
+                .inCardThin()
 
-        Text("常规材质")
-            .inCardRegular()
+            Text("常规材质")
+                .inCardRegular()
 
-        Text("厚材质")
-            .inCardThick()
+            Text("厚材质")
+                .inCardThick()
+        }
+        .padding()
     }
-    .padding()
-}
 
-#Preview("Card Extensions - Colors") {
-    VStack(spacing: 16) {
-        Text("颜色卡片")
-            .font(.headline)
+    #Preview("Card Extensions - Colors") {
+        VStack(spacing: 16) {
+            Text("颜色卡片")
+                .font(.headline)
 
-        Text("蓝色卡片")
-            .foregroundColor(.white)
-            .inCard(color: .blue)
+            Text("蓝色卡片")
+                .foregroundColor(.white)
+                .inCard(color: .blue)
 
-        Text("红色半透明")
-            .inCard(color: .red.opacity(0.8))
+            Text("红色半透明")
+                .inCard(color: .red.opacity(0.8))
 
-        Text("绿色渐变")
-            .foregroundColor(.white)
-            .inCard(gradient: [.green, .green.opacity(0.6)])
+            Text("绿色渐变")
+                .foregroundColor(.white)
+                .inCard(gradient: [.green, .green.opacity(0.6)])
+        }
+        .padding()
     }
-    .padding()
-}
 
-#Preview("Card Extensions - Complex") {
-    VStack(spacing: 16) {
-        Text("复杂内容卡片")
-            .font(.headline)
+    #Preview("Card Extensions - Complex") {
+        VStack(spacing: 16) {
+            Text("复杂内容卡片")
+                .font(.headline)
 
-        HStack {
-            Image(systemName: "person.circle.fill")
-                .foregroundColor(.blue)
-            VStack(alignment: .leading) {
-                Text("用户名")
-                    .font(.headline)
-                Text("用户描述")
-                    .font(.caption)
+            HStack {
+                Image(systemName: "person.circle.fill")
+                    .foregroundColor(.blue)
+                VStack(alignment: .leading) {
+                    Text("用户名")
+                        .font(.headline)
+                    Text("用户描述")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
                     .foregroundColor(.secondary)
             }
-            Spacer()
-            Image(systemName: "chevron.right")
-                .foregroundColor(.secondary)
-        }
-        .inCardUltraThin()
+            .inCardUltraThin()
 
-        VStack(alignment: .leading, spacing: 8) {
-            Text("文章标题")
-                .font(.headline)
-            Text("这是一段较长的文章描述，用来展示卡片中多行内容的显示效果。")
-                .font(.body)
+            VStack(alignment: .leading, spacing: 8) {
+                Text("文章标题")
+                    .font(.headline)
+                Text("这是一段较长的文章描述，用来展示卡片中多行内容的显示效果。")
+                    .font(.body)
+                    .foregroundColor(.secondary)
+                HStack {
+                    Image(systemName: "hand.thumbsup.fill")
+                    Text("点赞")
+                    Spacer()
+                    Image(systemName: "bubble.right.fill")
+                    Text("评论")
+                }
+                .font(.caption)
                 .foregroundColor(.secondary)
-            HStack {
-                Image(systemName: "hand.thumbsup.fill")
-                Text("点赞")
-                Spacer()
-                Image(systemName: "bubble.right.fill")
-                Text("评论")
             }
-            .font(.caption)
-            .foregroundColor(.secondary)
+            .inCard(gradient: [.blue, .purple])
+            .foregroundColor(.white)
         }
-        .inCard(gradient: [.blue, .purple])
-        .foregroundColor(.white)
+        .padding()
     }
-    .padding()
-}
 #endif
