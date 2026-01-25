@@ -20,9 +20,7 @@ struct ShapeVisibilityButtonsPreview: View {
                         .magicShapeVisibility(.always)
                 }
             }
-            .padding()
-            .background(Color.blue.opacity(0.1))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .inCard()
 
             VStack(spacing: 16) {
                 Text("悬停时显示形状").font(.subheadline)
@@ -37,9 +35,7 @@ struct ShapeVisibilityButtonsPreview: View {
                         .magicShapeVisibility(.onHover)
                 }
             }
-            .padding()
-            .background(Color.blue.opacity(0.1))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .inCard()
         }
         .padding()
     }
@@ -47,5 +43,7 @@ struct ShapeVisibilityButtonsPreview: View {
 
 #Preview("ShapeVisibility") {
     ShapeVisibilityButtonsPreview()
+        .frame(height: 700)
+        .frame(width: 500)
 }
 #endif

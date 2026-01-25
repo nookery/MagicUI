@@ -19,9 +19,7 @@ struct DebugBorderButtonsPreview: View {
                         .magicDebugBorder()
                 }
             }
-            .padding()
-            .background(Color.blue.opacity(0.1))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .inCard()
 
             VStack(spacing: 16) {
                 Text("自定义边框").font(.subheadline)
@@ -35,9 +33,7 @@ struct DebugBorderButtonsPreview: View {
                         .magicDebugBorder(.blue, dash: [8, 4])
                 }
             }
-            .padding()
-            .background(Color.blue.opacity(0.1))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .inCard()
 
             VStack(spacing: 16) {
                 Text("不同大小").font(.subheadline)
@@ -51,15 +47,16 @@ struct DebugBorderButtonsPreview: View {
                         .magicDebugBorder(.orange)
                 }
             }
-            .padding()
-            .background(Color.blue.opacity(0.1))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .inCard()
         }
         .padding()
+        .inScrollView()
     }
 }
 
 #Preview("DebugBorder") {
     DebugBorderButtonsPreview()
+        .frame(height: 700)
+        .frame(width: 500)
 }
 #endif

@@ -15,9 +15,7 @@ struct InteractiveButtonsPreview: View {
                 )
                 .magicTitle("Disabled Button")
             }
-            .padding()
-            .background(Color.blue.opacity(0.1))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .inCard()
 
             VStack(spacing: 16) {
                 Text("弹出内容").font(.subheadline)
@@ -39,9 +37,7 @@ struct InteractiveButtonsPreview: View {
                         }
                 }
             }
-            .padding()
-            .background(Color.blue.opacity(0.1))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .inCard()
 
             VStack(spacing: 16) {
                 Text("悬停提示").font(.subheadline)
@@ -66,15 +62,16 @@ struct InteractiveButtonsPreview: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
-            .padding()
-            .background(Color.blue.opacity(0.1))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .inCard()
         }
         .padding()
+        .inScrollView()
     }
 }
 
 #Preview("Interactive") {
     InteractiveButtonsPreview()
+        .frame(height: 700)
+        .frame(width: 500)
 }
 #endif

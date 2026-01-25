@@ -412,5 +412,7 @@ extension MagicButton {
 #if DEBUG
 #Preview("Basic") {
     BasicButtonsPreview()
+        .frame(height: 700)
+        .frame(width: 500)
 }
 #endif

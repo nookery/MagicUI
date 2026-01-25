@@ -101,10 +101,15 @@ struct BasicButtonsPreview: View {
             }
         }
         .padding()
+        .frame(maxHeight: .infinity)
+        .frame(maxWidth: .infinity)
+        .inScrollView()
     }
 }
 
 #Preview("Basic") {
     BasicButtonsPreview()
+        .frame(width: 500)
+        .frame(height: 600)
 }
 #endif
