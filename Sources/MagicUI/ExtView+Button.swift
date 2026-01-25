@@ -19,58 +19,29 @@ public extension View {
         }
         .buttonStyle(.plain)
     }
+
+    /// 将视图包装在带操作的按钮中
+    ///
+    /// 使用这个方法可以将任何视图转换为按钮形式，并指定点击动作
+    ///
+    /// ```swift
+    /// Text("Click Me")
+    ///     .inButtonWithAction {
+    ///         print("Button clicked!")
+    ///     }
+    /// ```
+    ///
+    /// - Parameter action: 点击按钮时执行的操作
+    /// - Returns: 包装在Button中的视图
+    func inButtonWithAction(_ action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            self
+        }
+        .buttonStyle(.plain)
+    }
 }
 
-// MARK: - Preview
-
 #if DEBUG
-    /// 按钮扩展预览
-    struct ButtonExtensionPreview: View {
-        var body: some View {
-            VStack(spacing: 20) {
-                Text("Button Extension Examples")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-
-                Text("Text as Button")
-                    .inButtonNoAction()
-                    .buttonStyle(.borderedProminent)
-
-                HStack {
-                    Image(systemName: "star.fill")
-                    Text("Icon + Text")
-                }
-                .inButtonNoAction()
-                .buttonStyle(.bordered)
-
-                Text("Custom Style")
-                    .padding()
-                    .inButtonNoAction()
-                    .background(.blue)
-                    .foregroundColor(.white)
-                    .roundedMedium()
-
-                HStack(spacing: 15) {
-                    Text("Capsule")
-                        .inButtonNoAction()
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 10)
-                        .background(.green)
-                        .foregroundColor(.white)
-                        .capsule()
-
-                    Text("Circle")
-                        .inButtonNoAction()
-                        .frame(width: 80, height: 80)
-                        .background(.orange)
-                        .foregroundColor(.white)
-                        .roundedFull()
-                }
-            }
-            .padding()
-        }
-    }
-
     #Preview("Button Extensions") {
         ButtonExtensionPreview()
             .frame(height: 700)

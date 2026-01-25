@@ -21,6 +21,8 @@ struct CardMaterialsPreview: View {
                 .inCardThick()
         }
         .padding()
+        .infinite()
+        .inScrollView()
     }
 }
 
