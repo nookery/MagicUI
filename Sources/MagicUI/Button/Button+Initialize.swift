@@ -114,6 +114,7 @@ extension MagicButton {
 }
 
 // MARK: - Simple factory helpers
+
 extension MagicButton {
     /// 创建一个简单的 MagicButton（回调无完成闭包）
     public static func simple(
@@ -257,8 +258,9 @@ extension MagicButton {
 }
 
 #if DEBUG
-#Preview("Basic") {
-    BasicButtonsPreview()
-}
+    #Preview("Basic") {
+        BasicButtonsPreview()
+            .frame(height: 600)
+            .frame(width: 500)
+    }
 #endif
-

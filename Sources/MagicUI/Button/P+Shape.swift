@@ -30,6 +30,7 @@ import SwiftUI
                             .magicTitle("Capsule")
                             .magicShape(.capsule)
                     }
+                    .frame(width: 200)
                 }
                 .inCard()
 

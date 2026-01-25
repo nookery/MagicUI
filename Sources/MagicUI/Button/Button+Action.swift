@@ -9,11 +9,11 @@ extension MagicButton {
 
         // 执行动作
         guard let action = action else { return }
-        
+
         if preventDoubleClick {
             // 立即显示loading状态
             isLoading = true
-            
+
             // 创建完成回调
             let completion = {
                 self.isLoading = false
@@ -30,7 +30,9 @@ extension MagicButton {
 }
 
 #if DEBUG
-#Preview("Action") {
-    LoadingAndPreventDoubleClickPreview()
-}
+    #Preview("Action") {
+        LoadingAndPreventDoubleClickPreview()
+            .frame(height: 600)
+            .frame(width: 500)
+    }
 #endif

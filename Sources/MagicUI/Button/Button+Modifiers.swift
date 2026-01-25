@@ -1,6 +1,7 @@
 import SwiftUI
 
 // MARK: - MagicButton Modifiers
+
 public extension MagicButton {
     /// 设置按钮图标
     /// - Parameter name: SF Symbols 图标名称
@@ -21,7 +22,7 @@ public extension MagicButton {
             action: self.action
         )
     }
-    
+
     /// 设置按钮标题
     /// - Parameter text: 标题文本，传入 nil 可以移除标题
     /// - Returns: 更新后的按钮
@@ -41,7 +42,7 @@ public extension MagicButton {
             action: self.action
         )
     }
-    
+
     /// 设置按钮样式
     /// - Parameter style: 按钮样式（.primary 或 .secondary）
     /// - Returns: 更新后的按钮
@@ -61,7 +62,7 @@ public extension MagicButton {
             action: self.action
         )
     }
-    
+
     /// 设置按钮大小
     /// - Parameter size: 按钮大小（.auto、.small、.regular 或 .large）
     /// - Returns: 更新后的按钮
@@ -90,7 +91,7 @@ public extension MagicButton {
             action: self.action
         )
     }
-    
+
     /// 设置按钮形状
     /// - Parameter shape: 按钮形状，支持多种预设和自定义形状
     /// - Returns: 更新后的按钮
@@ -130,7 +131,7 @@ public extension MagicButton {
             action: self.action
         )
     }
-    
+
     /// 设置按钮禁用状态
     /// - Parameter reason: 禁用原因，显示在提示中。传入 nil 可以启用按钮
     /// - Returns: 更新后的按钮
@@ -150,7 +151,7 @@ public extension MagicButton {
             action: self.action
         )
     }
-    
+
     /// 设置按钮的弹出内容
     /// - Parameter content: 弹出内容的视图构建器
     /// - Returns: 更新后的按钮
@@ -181,7 +182,7 @@ public extension MagicButton {
             action: self.action
         )
     }
-    
+
     /// 设置按钮形状的显示时机
     /// - Parameter visibility: 形状显示时机（.always 或 .onHover）
     /// - Returns: 更新后的按钮
@@ -210,7 +211,7 @@ public extension MagicButton {
             action: self.action
         )
     }
-    
+
     /// 设置按钮的背景色
     /// - Parameter color: 自定义背景色
     /// - Returns: 修改后的按钮
@@ -239,7 +240,7 @@ public extension MagicButton {
             action: self.action
         )
     }
-    
+
     /// 设置按钮的背景视图
     /// - Parameter background: 自定义背景视图
     /// - Returns: 修改后的按钮
@@ -274,7 +275,7 @@ public extension MagicButton {
             action: self.action
         )
     }
-    
+
     /// 显示虚线边框，用于调试布局
     /// - Parameters:
     ///   - color: 边框颜色
@@ -307,7 +308,9 @@ public extension MagicButton {
 }
 
 #if DEBUG
-#Preview("Basic") {
-    BasicButtonsPreview()
-}
+    #Preview("Basic") {
+        BasicButtonsPreview()
+            .frame(height: 600)
+            .frame(width: 500)
+    }
 #endif

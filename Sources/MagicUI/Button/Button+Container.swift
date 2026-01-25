@@ -39,23 +39,23 @@ extension MagicButton {
             .buttonStyle(MagicButtonStyle())
         }
     }
-    
+
     /// 根据图标类型创建对应的视图
     @ViewBuilder
     private func iconView(icon: MagicButtonIcon, size: CGFloat) -> some View {
         switch icon {
-        case .systemName(let name):
+        case let .systemName(name):
             Image(systemName: name)
                 .font(.system(size: size))
         #if os(macOS)
-        case .customImage(let nsImage):
-            // 自定义图标需要稍微放大以匹配 SF Symbols 的视觉大小
-            // SF Symbols 的字体大小通常比实际显示大小要小，所以我们需要补偿这个差异
-            let adjustedSize = size * 1.4 // 调整倍数以匹配 SF Symbols 的视觉效果
-            Image(nsImage: nsImage)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: adjustedSize, height: adjustedSize)
+            case let .customImage(nsImage):
+                // 自定义图标需要稍微放大以匹配 SF Symbols 的视觉大小
+                // SF Symbols 的字体大小通常比实际显示大小要小，所以我们需要补偿这个差异
+                let adjustedSize = size * 1.4 // 调整倍数以匹配 SF Symbols 的视觉效果
+                Image(nsImage: nsImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: adjustedSize, height: adjustedSize)
         #endif
         }
     }
@@ -69,8 +69,10 @@ struct MagicButtonStyle: ButtonStyle {
     }
 }
 
-#if DEBUG   
-#Preview("Container") {
-    BasicButtonsPreview()
-}
+#if DEBUG
+    #Preview("Container") {
+        BasicButtonsPreview()
+            .frame(height: 600)
+            .frame(width: 500)
+    }
 #endif

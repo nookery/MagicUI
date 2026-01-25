@@ -1,8 +1,8 @@
-import SwiftUI
 import OSLog
+import SwiftUI
 
 #if os(macOS)
-import AppKit
+    import AppKit
 #endif
 
 /// 图标类型
@@ -11,7 +11,7 @@ public enum MagicButtonIcon {
     case systemName(String)
     /// 自定义图标（仅 macOS）
     #if os(macOS)
-    case customImage(NSImage)
+        case customImage(NSImage)
     #endif
 }
 
@@ -396,7 +396,7 @@ extension MagicButton {
         newButton.buttonId = id
         return newButton
     }
-    
+
     /// 设置按钮的动态 ID 绑定
     /// - Parameter idBinding: ID 绑定
     /// - Returns: 更新后的 MagicButton
@@ -410,9 +410,15 @@ extension MagicButton {
 }
 
 #if DEBUG
-#Preview("Basic") {
-    BasicButtonsPreview()
-        .frame(height: 700)
-        .frame(width: 500)
-}
+    #Preview("Basic") {
+        BasicButtonsPreview()
+            .frame(height: 700)
+            .frame(width: 500)
+    }
+
+    #Preview("Shape") {
+        ShapeButtonsPreview()
+            .frame(height: 600)
+            .frame(width: 500)
+    }
 #endif

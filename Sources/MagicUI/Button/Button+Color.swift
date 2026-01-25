@@ -81,7 +81,9 @@ extension MagicButton {
 }
 
 #if DEBUG
-#Preview("MagicButton+Color - Theming") {
-    BasicButtonsPreview()
-}
+    #Preview("MagicButton+Color - Theming") {
+        BasicButtonsPreview()
+            .frame(height: 600)
+            .frame(width: 500)
+    }
 #endif
