@@ -173,6 +173,8 @@ extension MagicBackground {
             Text("海洋")
         }
     }
+    .frame(height: 700)
+    .frame(width: 900)
 }
 
 // MARK: - View Extensions

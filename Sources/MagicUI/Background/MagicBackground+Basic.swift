@@ -501,4 +501,6 @@ extension MagicBackground {
             Text("透明度")
         }
     }
+    .frame(height: 700)
+    .frame(width: 900)
 }

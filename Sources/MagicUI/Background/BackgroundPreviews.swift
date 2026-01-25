@@ -256,6 +256,8 @@ import SwiftUI
 
     #Preview("All Magic Backgrounds") {
         BackgroundPreviews()
+            .frame(height: 750)
+            .frame(width: 550)
     }
 
 #endif
